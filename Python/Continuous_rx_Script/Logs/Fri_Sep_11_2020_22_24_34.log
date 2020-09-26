@@ -1,0 +1,34 @@
+11-09-2020 22:24:34 - --------------------------------------------------------------------------------
+11-09-2020 22:24:34 - Jay Shri Ram! Logging started at Fri Sep 11 22:24:34 2020
+11-09-2020 22:24:34 - --------------------------------------------------------------------------------
+11-09-2020 22:24:34 - MqttCore initialized
+11-09-2020 22:24:34 - Client id: akshay_trial2
+11-09-2020 22:24:34 - Protocol version: MQTTv3.1.1
+11-09-2020 22:24:34 - Authentication type: TLSv1.2 certificate based Mutual Auth.
+11-09-2020 22:24:34 - Configuring endpoint...
+11-09-2020 22:24:34 - Configuring certificates...
+11-09-2020 22:24:34 - Configuring offline requests queueing: max queue size: -1
+11-09-2020 22:24:34 - Configuring offline requests queue draining interval: 0.500000 sec
+11-09-2020 22:24:34 - Configuring connect/disconnect time out: 10.000000 sec
+11-09-2020 22:24:34 - Configuring MQTT operation time out: 5.000000 sec
+11-09-2020 22:24:34 - Performing sync connect...
+11-09-2020 22:24:34 - Performing async connect...
+11-09-2020 22:24:34 - Keep-alive: 5.000000 sec
+11-09-2020 22:24:34 - Performing sync publish...
+11-09-2020 22:24:34 - Performing sync subscribe...
+11-09-2020 22:24:35 - Connection done bro! now keep on receiving messages
+11-09-2020 22:24:35 - Received new message: 
+11-09-2020 22:24:35 - Hello from ESP32 with count = 1640
+11-09-2020 22:24:35 - from topic: akshay_trial2_test
+11-09-2020 22:24:35 - Now Message count = 1
+11-09-2020 22:24:35 - ----------------------------------------
+11-09-2020 22:24:37 - Received new message: 
+11-09-2020 22:24:37 - Hello from ESP32 with count = 1641
+11-09-2020 22:24:37 - from topic: akshay_trial2_test
+11-09-2020 22:24:37 - Now Message count = 2
+11-09-2020 22:24:38 - ----------------------------------------
+11-09-2020 22:24:39 - Received new message: 
+11-09-2020 22:24:39 - Hello from ESP32 with count = 1642
+11-09-2020 22:24:39 - from topic: akshay_trial2_test
+11-09-2020 22:24:39 - Now Message count = 3
+11-09-2020 22:24:40 - ----------------------------------------

@@ -1,0 +1,29 @@
+15-09-2020 12:34:04 - --------------------------------------------------------------------------------
+15-09-2020 12:34:04 - Jay Shri Ram! Logging started at Tue Sep 15 12:34:04 2020
+15-09-2020 12:34:04 - --------------------------------------------------------------------------------
+15-09-2020 12:34:05 - MqttCore initialized
+15-09-2020 12:34:05 - Client id: akshay_trial2
+15-09-2020 12:34:05 - Protocol version: MQTTv3.1.1
+15-09-2020 12:34:05 - Authentication type: TLSv1.2 certificate based Mutual Auth.
+15-09-2020 12:34:05 - Configuring endpoint...
+15-09-2020 12:34:05 - Configuring certificates...
+15-09-2020 12:34:05 - Configuring offline requests queueing: max queue size: -1
+15-09-2020 12:34:05 - Configuring offline requests queue draining interval: 0.500000 sec
+15-09-2020 12:34:05 - Configuring connect/disconnect time out: 10.000000 sec
+15-09-2020 12:34:05 - Configuring MQTT operation time out: 5.000000 sec
+15-09-2020 12:34:05 - Performing sync connect...
+15-09-2020 12:34:05 - Performing async connect...
+15-09-2020 12:34:05 - Keep-alive: 5.000000 sec
+15-09-2020 12:34:05 - Performing sync publish...
+15-09-2020 12:34:05 - Performing sync subscribe...
+15-09-2020 12:34:05 - Connection done bro! now keep on receiving messages
+15-09-2020 12:34:05 - Received new message: 
+15-09-2020 12:34:05 - adc_1 = 2746 adc_2 = 450
+15-09-2020 12:34:05 - from topic: akshay_trial2_test
+15-09-2020 12:34:05 - Now Message count = 1
+15-09-2020 12:34:05 - ----------------------------------------
+15-09-2020 12:34:07 - Received new message: 
+15-09-2020 12:34:07 - adc_1 = 2752 adc_2 = 448
+15-09-2020 12:34:07 - from topic: akshay_trial2_test
+15-09-2020 12:34:07 - Now Message count = 2
+15-09-2020 12:34:07 - ----------------------------------------

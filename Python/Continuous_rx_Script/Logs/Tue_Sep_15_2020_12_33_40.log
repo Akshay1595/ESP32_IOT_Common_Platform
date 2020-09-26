@@ -1,0 +1,44 @@
+15-09-2020 12:33:40 - --------------------------------------------------------------------------------
+15-09-2020 12:33:40 - Jay Shri Ram! Logging started at Tue Sep 15 12:33:40 2020
+15-09-2020 12:33:40 - --------------------------------------------------------------------------------
+15-09-2020 12:33:40 - MqttCore initialized
+15-09-2020 12:33:40 - Client id: akshay_trial2
+15-09-2020 12:33:40 - Protocol version: MQTTv3.1.1
+15-09-2020 12:33:40 - Authentication type: TLSv1.2 certificate based Mutual Auth.
+15-09-2020 12:33:40 - Configuring endpoint...
+15-09-2020 12:33:40 - Configuring certificates...
+15-09-2020 12:33:40 - Configuring offline requests queueing: max queue size: -1
+15-09-2020 12:33:40 - Configuring offline requests queue draining interval: 0.500000 sec
+15-09-2020 12:33:40 - Configuring connect/disconnect time out: 10.000000 sec
+15-09-2020 12:33:40 - Configuring MQTT operation time out: 5.000000 sec
+15-09-2020 12:33:40 - Performing sync connect...
+15-09-2020 12:33:40 - Performing async connect...
+15-09-2020 12:33:40 - Keep-alive: 5.000000 sec
+15-09-2020 12:33:41 - Performing sync publish...
+15-09-2020 12:33:41 - Performing sync subscribe...
+15-09-2020 12:33:41 - Connection done bro! now keep on receiving messages
+15-09-2020 12:33:41 - Received new message: 
+15-09-2020 12:33:41 - adc_1 = 2746 adc_2 = 451
+15-09-2020 12:33:41 - from topic: akshay_trial2_test
+15-09-2020 12:33:41 - Now Message count = 1
+15-09-2020 12:33:41 - ----------------------------------------
+15-09-2020 12:33:43 - Received new message: 
+15-09-2020 12:33:43 - adc_1 = 2752 adc_2 = 448
+15-09-2020 12:33:43 - from topic: akshay_trial2_test
+15-09-2020 12:33:43 - Now Message count = 2
+15-09-2020 12:33:43 - ----------------------------------------
+15-09-2020 12:33:45 - Received new message: 
+15-09-2020 12:33:45 - adc_1 = 2752 adc_2 = 446
+15-09-2020 12:33:45 - from topic: akshay_trial2_test
+15-09-2020 12:33:45 - Now Message count = 3
+15-09-2020 12:33:45 - ----------------------------------------
+15-09-2020 12:33:47 - Received new message: 
+15-09-2020 12:33:47 - adc_1 = 2747 adc_2 = 448
+15-09-2020 12:33:47 - from topic: akshay_trial2_test
+15-09-2020 12:33:47 - Now Message count = 4
+15-09-2020 12:33:47 - ----------------------------------------
+15-09-2020 12:33:49 - Received new message: 
+15-09-2020 12:33:49 - adc_1 = 2746 adc_2 = 453
+15-09-2020 12:33:49 - from topic: akshay_trial2_test
+15-09-2020 12:33:49 - Now Message count = 5
+15-09-2020 12:33:49 - ----------------------------------------
