@@ -12,10 +12,9 @@ Also this code is able  to get message from AWS thing and based on message it ca
 3. Firwmare works with AT commands need to be sent from AWS cloud
 4. Modular and well documented firmware which provide simple functionality to add command and action for user
 5. Python script running at user's AWS EC2 remote machine which collects data and store it.
-6. Based on computational logic which can be modified any time user can make send command to ESP32 and take an action
+6. Based on computational logic which can be modified any time user can send command to ESP32 and take an action
 7. Python script can be modified anytime based on requirement
-8. Also firmware can be updated if requirements changes with OTA feature.
-9. WiFi credentials can be configured with android app and bluetooth
+8. WiFi credentials can be configured with android app and bluetooth
 
 Code accepts wifi credentials with Bluetooth. Install Serial Bluetooth Terminal app in users mobile phone.
 Terminal should input command with
