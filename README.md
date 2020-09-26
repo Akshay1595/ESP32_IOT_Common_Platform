@@ -5,7 +5,7 @@ Also this code is able  to get message from AWS thing and based on message it ca
 
 ![Diagram of Project](https://github.com/Akshay1595/ESP32_IOT_Common_Platform/blob/master/Documentation/diagram_of_Common_IOT_platform.jpg)
 
-###Features:
+### Features:
 
 1. Firmware can be modified to read sensor data
 2. Firmware can be updated with OTA feature
