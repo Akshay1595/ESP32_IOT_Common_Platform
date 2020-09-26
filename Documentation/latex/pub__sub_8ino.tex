@@ -1,0 +1,113 @@
+\hypertarget{pub__sub_8ino}{}\doxysection{C\+:/\+Users/aksha/\+Documents/\+Akshay/\+Projects/\+Smart\+\_\+solutions/\+Akshay\+\_\+data/\+E\+S\+P32/\+New\+Code\+\_\+\+\_\+\+Pub\+\_\+sub/pub\+\_\+sub/pub\+\_\+sub.ino File Reference}
+\label{pub__sub_8ino}\index{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/pub\_sub.ino@{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/pub\_sub.ino}}
+
+
+This is the main file where code starts execution. This project is working on E\+S\+P32 code compiled on Arduino I\+DE platform. E\+S\+P32 is used to collect and send data to cloud. Cloud server will collect the data and take a decision based on computing logic.  
+
+
+{\ttfamily \#include \char`\"{}my\+\_\+header.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pub__sub_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\item 
+void \mbox{\hyperlink{pub__sub_8ino_a7dfd9b79bc5a37d7df40207afbc5431f}{setup}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{pub__sub_8ino_af84653dce235192aa663ea49a651271b}{last\+Msg}} = 0
+\item 
+char \mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}} \mbox{[}64\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main file where code starts execution. This project is working on E\+S\+P32 code compiled on Arduino I\+DE platform. E\+S\+P32 is used to collect and send data to cloud. Cloud server will collect the data and take a decision based on computing logic. 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Akshay Godase 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/09-\/2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pub__sub_8ino_afe461d27b9c48d5921c00d521181f12f}\label{pub__sub_8ino_afe461d27b9c48d5921c00d521181f12f}} 
+\index{pub\_sub.ino@{pub\_sub.ino}!loop@{loop}}
+\index{loop@{loop}!pub\_sub.ino@{pub\_sub.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ This is the loop function which will loop continuously 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42             \{ }
+\DoxyCodeLine{43     \textcolor{comment}{// Step 1: check if client is connected}}
+\DoxyCodeLine{44     \mbox{\hyperlink{aws_8cpp_acf0e2d6abfa54ef5a02614497a122757}{aws\_check\_if\_connected}}();}
+\DoxyCodeLine{45     }
+\DoxyCodeLine{46     \textcolor{keywordtype}{long} now = millis();}
+\DoxyCodeLine{47     \textcolor{comment}{// This condition will check if loop is not idle from 2 seconds}}
+\DoxyCodeLine{48     \textcolor{keywordflow}{if} (now -\/ \mbox{\hyperlink{pub__sub_8ino_af84653dce235192aa663ea49a651271b}{lastMsg}} > 2000) \{}
+\DoxyCodeLine{49         \mbox{\hyperlink{pub__sub_8ino_af84653dce235192aa663ea49a651271b}{lastMsg}} = now;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51         \mbox{\hyperlink{adc_8cpp_ac82c69d072e770fc40e81fc9c53857c1}{adc\_read\_and\_msg}}(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{52         Serial.print(\textcolor{stringliteral}{"{}Publish message: "{}});}
+\DoxyCodeLine{53         Serial.println(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{54         \textcolor{comment}{// Step 2: publish the message}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \mbox{\hyperlink{aws_8cpp_acda02faadbba59fcacff34f62dd36282}{aws\_publish}}(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{57     \}              }
+\DoxyCodeLine{58     delay(1000); \textcolor{comment}{// wait for a second}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{comment}{// Step 3: Toggle the LED for indication to end user}}
+\DoxyCodeLine{61     \mbox{\hyperlink{led_8cpp_a003d0709ca32748a854f13ffaf661946}{led\_toggle\_status\_pin}}();}
+\DoxyCodeLine{62 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{pub__sub_8ino_a7dfd9b79bc5a37d7df40207afbc5431f}\label{pub__sub_8ino_a7dfd9b79bc5a37d7df40207afbc5431f}} 
+\index{pub\_sub.ino@{pub\_sub.ino}!setup@{setup}}
+\index{setup@{setup}!pub\_sub.ino@{pub\_sub.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This is the setup function where all initializations are done 
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                  \{}
+\DoxyCodeLine{28     Serial.setDebugOutput(\textcolor{keyword}{true});}
+\DoxyCodeLine{29     Serial.begin(115200);}
+\DoxyCodeLine{30     \mbox{\hyperlink{cmd_8cpp_a26ee2469586d27bea5fd2d962f6a626b}{cmd\_ble\_init}}();}
+\DoxyCodeLine{31     \mbox{\hyperlink{led_8cpp_a45a4dce2a793aa9be79132acc6527869}{led\_setup}}();}
+\DoxyCodeLine{32     \mbox{\hyperlink{wifi_8cpp_a7267cf9f0ba503d904709977c18a07ea}{wifi\_init}}();}
+\DoxyCodeLine{33     delay(1000);}
+\DoxyCodeLine{34     \mbox{\hyperlink{aws_8cpp_af93d078d69a1aec27b696444fdf146e1}{aws\_init}}();}
+\DoxyCodeLine{35     Serial.println(\textcolor{stringliteral}{"{}All Setup Done!\(\backslash\)n"{}});}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{pub__sub_8ino_af84653dce235192aa663ea49a651271b}\label{pub__sub_8ino_af84653dce235192aa663ea49a651271b}} 
+\index{pub\_sub.ino@{pub\_sub.ino}!lastMsg@{lastMsg}}
+\index{lastMsg@{lastMsg}!pub\_sub.ino@{pub\_sub.ino}}
+\doxysubsubsection{\texorpdfstring{lastMsg}{lastMsg}}
+{\footnotesize\ttfamily long last\+Msg = 0}
+
+last\+Msg will maintain the time stamp of last message ~\newline
+ \mbox{\Hypertarget{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}\label{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}} 
+\index{pub\_sub.ino@{pub\_sub.ino}!payload@{payload}}
+\index{payload@{payload}!pub\_sub.ino@{pub\_sub.ino}}
+\doxysubsubsection{\texorpdfstring{payload}{payload}}
+{\footnotesize\ttfamily char payload\mbox{[}64\mbox{]}}
+
+Buffer to maintain the message to be translated to cloud 

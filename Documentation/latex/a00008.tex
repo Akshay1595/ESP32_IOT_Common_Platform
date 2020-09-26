@@ -1,0 +1,134 @@
+\hypertarget{a00008}{}\doxysection{aws.\+cpp File Reference}
+\label{a00008}\index{aws.cpp@{aws.cpp}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Pub\+Sub\+Client \mbox{\hyperlink{a00008_aee63e84c606cfaefce454689113c636c_aee63e84c606cfaefce454689113c636c}{client}} (\mbox{\hyperlink{a00008_a3ab67634fd9f78f1d4c05f69c7a3d613_a3ab67634fd9f78f1d4c05f69c7a3d613}{esp\+Client}})
+\item 
+void \mbox{\hyperlink{a00008_ab75c7b3ff0fef9b987fc92b23cd1fa0b_ab75c7b3ff0fef9b987fc92b23cd1fa0b}{aws\+\_\+init}} ()
+\item 
+void \mbox{\hyperlink{a00008_a373b2621086aa3f30cf73e97426f28ec_a373b2621086aa3f30cf73e97426f28ec}{aws\+\_\+callback}} (char $\ast$topic, byte $\ast$payload, unsigned int length)
+\item 
+void \mbox{\hyperlink{a00008_ac72eb554ac41bce9a0a5fd0feb758208_ac72eb554ac41bce9a0a5fd0feb758208}{aws\+\_\+read\+\_\+certificates}} ()
+\item 
+void \mbox{\hyperlink{a00008_ab979a968986fdfced467052895ea4e90_ab979a968986fdfced467052895ea4e90}{aws\+\_\+reconnect}} ()
+\item 
+void \mbox{\hyperlink{a00008_ac5277879bd6b6b77a0ba7fa48db925e7_ac5277879bd6b6b77a0ba7fa48db925e7}{aws\+\_\+configure\+\_\+client}} ()
+\item 
+void \mbox{\hyperlink{a00008_acda02faadbba59fcacff34f62dd36282_acda02faadbba59fcacff34f62dd36282}{aws\+\_\+publish}} (char $\ast$payload)
+\item 
+void \mbox{\hyperlink{a00008_a47c9ff3cc6b99f3637d8a667249192cb_a47c9ff3cc6b99f3637d8a667249192cb}{aws\+\_\+check\+\_\+if\+\_\+connected}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{a00008_a7b655607207387842cf5bf9f881af61c_a7b655607207387842cf5bf9f881af61c}{Read\+\_\+rootca}}
+\item 
+String \mbox{\hyperlink{a00008_a0958012994f1cad888017cabcfefe239_a0958012994f1cad888017cabcfefe239}{Read\+\_\+cert}}
+\item 
+String \mbox{\hyperlink{a00008_a8c19a69cb3f07236b6575f924ebf678e_a8c19a69cb3f07236b6575f924ebf678e}{Read\+\_\+privatekey}}
+\item 
+char $\ast$ \mbox{\hyperlink{a00008_a5c657da0b2c6d3eb5425bb30527e61b4_a5c657da0b2c6d3eb5425bb30527e61b4}{p\+Read\+\_\+rootca}}
+\item 
+char $\ast$ \mbox{\hyperlink{a00008_a53f5a68652edd5cc28b5498767b5c142_a53f5a68652edd5cc28b5498767b5c142}{p\+Read\+\_\+cert}}
+\item 
+char $\ast$ \mbox{\hyperlink{a00008_a000576dc9288a7d17621154d0f2464d3_a000576dc9288a7d17621154d0f2464d3}{p\+Read\+\_\+privatekey}}
+\item 
+Wi\+Fi\+Client\+Secure \mbox{\hyperlink{a00008_a3ab67634fd9f78f1d4c05f69c7a3d613_a3ab67634fd9f78f1d4c05f69c7a3d613}{esp\+Client}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{a00008_a373b2621086aa3f30cf73e97426f28ec_a373b2621086aa3f30cf73e97426f28ec}\label{a00008_a373b2621086aa3f30cf73e97426f28ec_a373b2621086aa3f30cf73e97426f28ec}} 
+\index{aws.cpp@{aws.cpp}!aws\_callback@{aws\_callback}}
+\index{aws\_callback@{aws\_callback}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_callback()}{aws\_callback()}}
+{\footnotesize\ttfamily void aws\+\_\+callback (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{byte $\ast$}]{payload,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00008_a47c9ff3cc6b99f3637d8a667249192cb_a47c9ff3cc6b99f3637d8a667249192cb}\label{a00008_a47c9ff3cc6b99f3637d8a667249192cb_a47c9ff3cc6b99f3637d8a667249192cb}} 
+\index{aws.cpp@{aws.cpp}!aws\_check\_if\_connected@{aws\_check\_if\_connected}}
+\index{aws\_check\_if\_connected@{aws\_check\_if\_connected}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_check\_if\_connected()}{aws\_check\_if\_connected()}}
+{\footnotesize\ttfamily void aws\+\_\+check\+\_\+if\+\_\+connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00008_ac5277879bd6b6b77a0ba7fa48db925e7_ac5277879bd6b6b77a0ba7fa48db925e7}\label{a00008_ac5277879bd6b6b77a0ba7fa48db925e7_ac5277879bd6b6b77a0ba7fa48db925e7}} 
+\index{aws.cpp@{aws.cpp}!aws\_configure\_client@{aws\_configure\_client}}
+\index{aws\_configure\_client@{aws\_configure\_client}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_configure\_client()}{aws\_configure\_client()}}
+{\footnotesize\ttfamily void aws\+\_\+configure\+\_\+client (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00008_ab75c7b3ff0fef9b987fc92b23cd1fa0b_ab75c7b3ff0fef9b987fc92b23cd1fa0b}\label{a00008_ab75c7b3ff0fef9b987fc92b23cd1fa0b_ab75c7b3ff0fef9b987fc92b23cd1fa0b}} 
+\index{aws.cpp@{aws.cpp}!aws\_init@{aws\_init}}
+\index{aws\_init@{aws\_init}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_init()}{aws\_init()}}
+{\footnotesize\ttfamily void aws\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00008_acda02faadbba59fcacff34f62dd36282_acda02faadbba59fcacff34f62dd36282}\label{a00008_acda02faadbba59fcacff34f62dd36282_acda02faadbba59fcacff34f62dd36282}} 
+\index{aws.cpp@{aws.cpp}!aws\_publish@{aws\_publish}}
+\index{aws\_publish@{aws\_publish}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_publish()}{aws\_publish()}}
+{\footnotesize\ttfamily void aws\+\_\+publish (\begin{DoxyParamCaption}\item[{char $\ast$}]{payload }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00008_ac72eb554ac41bce9a0a5fd0feb758208_ac72eb554ac41bce9a0a5fd0feb758208}\label{a00008_ac72eb554ac41bce9a0a5fd0feb758208_ac72eb554ac41bce9a0a5fd0feb758208}} 
+\index{aws.cpp@{aws.cpp}!aws\_read\_certificates@{aws\_read\_certificates}}
+\index{aws\_read\_certificates@{aws\_read\_certificates}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_read\_certificates()}{aws\_read\_certificates()}}
+{\footnotesize\ttfamily void aws\+\_\+read\+\_\+certificates (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00008_ab979a968986fdfced467052895ea4e90_ab979a968986fdfced467052895ea4e90}\label{a00008_ab979a968986fdfced467052895ea4e90_ab979a968986fdfced467052895ea4e90}} 
+\index{aws.cpp@{aws.cpp}!aws\_reconnect@{aws\_reconnect}}
+\index{aws\_reconnect@{aws\_reconnect}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_reconnect()}{aws\_reconnect()}}
+{\footnotesize\ttfamily void aws\+\_\+reconnect (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00008_aee63e84c606cfaefce454689113c636c_aee63e84c606cfaefce454689113c636c}\label{a00008_aee63e84c606cfaefce454689113c636c_aee63e84c606cfaefce454689113c636c}} 
+\index{aws.cpp@{aws.cpp}!client@{client}}
+\index{client@{client}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{client()}{client()}}
+{\footnotesize\ttfamily Pub\+Sub\+Client client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00008_a3ab67634fd9f78f1d4c05f69c7a3d613_a3ab67634fd9f78f1d4c05f69c7a3d613}{esp\+Client}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{a00008_a3ab67634fd9f78f1d4c05f69c7a3d613_a3ab67634fd9f78f1d4c05f69c7a3d613}\label{a00008_a3ab67634fd9f78f1d4c05f69c7a3d613_a3ab67634fd9f78f1d4c05f69c7a3d613}} 
+\index{aws.cpp@{aws.cpp}!espClient@{espClient}}
+\index{espClient@{espClient}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{espClient}{espClient}}
+{\footnotesize\ttfamily Wi\+Fi\+Client\+Secure esp\+Client}
+
+\mbox{\Hypertarget{a00008_a53f5a68652edd5cc28b5498767b5c142_a53f5a68652edd5cc28b5498767b5c142}\label{a00008_a53f5a68652edd5cc28b5498767b5c142_a53f5a68652edd5cc28b5498767b5c142}} 
+\index{aws.cpp@{aws.cpp}!pRead\_cert@{pRead\_cert}}
+\index{pRead\_cert@{pRead\_cert}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{pRead\_cert}{pRead\_cert}}
+{\footnotesize\ttfamily char$\ast$ p\+Read\+\_\+cert}
+
+\mbox{\Hypertarget{a00008_a000576dc9288a7d17621154d0f2464d3_a000576dc9288a7d17621154d0f2464d3}\label{a00008_a000576dc9288a7d17621154d0f2464d3_a000576dc9288a7d17621154d0f2464d3}} 
+\index{aws.cpp@{aws.cpp}!pRead\_privatekey@{pRead\_privatekey}}
+\index{pRead\_privatekey@{pRead\_privatekey}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{pRead\_privatekey}{pRead\_privatekey}}
+{\footnotesize\ttfamily char$\ast$ p\+Read\+\_\+privatekey}
+
+\mbox{\Hypertarget{a00008_a5c657da0b2c6d3eb5425bb30527e61b4_a5c657da0b2c6d3eb5425bb30527e61b4}\label{a00008_a5c657da0b2c6d3eb5425bb30527e61b4_a5c657da0b2c6d3eb5425bb30527e61b4}} 
+\index{aws.cpp@{aws.cpp}!pRead\_rootca@{pRead\_rootca}}
+\index{pRead\_rootca@{pRead\_rootca}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{pRead\_rootca}{pRead\_rootca}}
+{\footnotesize\ttfamily char$\ast$ p\+Read\+\_\+rootca}
+
+\mbox{\Hypertarget{a00008_a0958012994f1cad888017cabcfefe239_a0958012994f1cad888017cabcfefe239}\label{a00008_a0958012994f1cad888017cabcfefe239_a0958012994f1cad888017cabcfefe239}} 
+\index{aws.cpp@{aws.cpp}!Read\_cert@{Read\_cert}}
+\index{Read\_cert@{Read\_cert}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{Read\_cert}{Read\_cert}}
+{\footnotesize\ttfamily String Read\+\_\+cert}
+
+\mbox{\Hypertarget{a00008_a8c19a69cb3f07236b6575f924ebf678e_a8c19a69cb3f07236b6575f924ebf678e}\label{a00008_a8c19a69cb3f07236b6575f924ebf678e_a8c19a69cb3f07236b6575f924ebf678e}} 
+\index{aws.cpp@{aws.cpp}!Read\_privatekey@{Read\_privatekey}}
+\index{Read\_privatekey@{Read\_privatekey}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{Read\_privatekey}{Read\_privatekey}}
+{\footnotesize\ttfamily String Read\+\_\+privatekey}
+
+\mbox{\Hypertarget{a00008_a7b655607207387842cf5bf9f881af61c_a7b655607207387842cf5bf9f881af61c}\label{a00008_a7b655607207387842cf5bf9f881af61c_a7b655607207387842cf5bf9f881af61c}} 
+\index{aws.cpp@{aws.cpp}!Read\_rootca@{Read\_rootca}}
+\index{Read\_rootca@{Read\_rootca}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{Read\_rootca}{Read\_rootca}}
+{\footnotesize\ttfamily String Read\+\_\+rootca}
+

@@ -1,0 +1,416 @@
+\hypertarget{aws_8cpp}{}\doxysection{C\+:/\+Users/aksha/\+Documents/\+Akshay/\+Projects/\+Smart\+\_\+solutions/\+Akshay\+\_\+data/\+E\+S\+P32/\+New\+Code\+\_\+\+\_\+\+Pub\+\_\+sub/pub\+\_\+sub/aws.cpp File Reference}
+\label{aws_8cpp}\index{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/aws.cpp@{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/aws.cpp}}
+
+
+A\+WS module to configure send and receive messages from A\+WS cloud.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Pub\+Sub\+Client.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}S\+P\+I\+F\+F\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}aws.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{aws_8cpp_a7d02120bc3a9639236a24d6c29f7b8ee}{aws\+\_\+callback}} (char $\ast$topic, byte $\ast$\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}}, unsigned int length)
+\begin{DoxyCompactList}\small\item\em callback function getting called whenever message received from A\+WS thing \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{aws_8cpp_acf0e2d6abfa54ef5a02614497a122757}{aws\+\_\+check\+\_\+if\+\_\+connected}} (void)
+\begin{DoxyCompactList}\small\item\em Function to ensure if A\+WS client is connected. If not connected reconnect it. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{aws_8cpp_a4f58dc8412e8947a07c9dcce9bc4ce67}{aws\+\_\+configure\+\_\+client}} (void)
+\begin{DoxyCompactList}\small\item\em This function will be called after certificates are read from S\+P\+I\+F\+FS. It will configure according to certificate data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{aws_8cpp_af93d078d69a1aec27b696444fdf146e1}{aws\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Function will initialize all the necessary components for A\+WS. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{aws_8cpp_a3bf70efa4d06415cef2bce63808004cd}{aws\+\_\+print\+\_\+certificates}} (void)
+\begin{DoxyCompactList}\small\item\em function will print all the certificates read from S\+P\+I\+FF \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{aws_8cpp_acda02faadbba59fcacff34f62dd36282}{aws\+\_\+publish}} (char $\ast$\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}})
+\begin{DoxyCompactList}\small\item\em Function to publish on A\+WS cloud configured. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{aws_8cpp_a093d9e86c45f3e96d9062727b04b589f}{aws\+\_\+read\+\_\+certificates}} (void)
+\begin{DoxyCompactList}\small\item\em function will read all the certificates read from S\+P\+I\+FF these certificates are necessary for A\+WS client connection. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{aws_8cpp_a9a273d1fef86e42b8aef00447153f31f}{aws\+\_\+reconnect}} (void)
+\begin{DoxyCompactList}\small\item\em This function will be called whenever A\+WS client is disconnected to reconnect again. \end{DoxyCompactList}\item 
+Pub\+Sub\+Client \mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}} (\mbox{\hyperlink{aws_8cpp_a3ab67634fd9f78f1d4c05f69c7a3d613}{esp\+Client}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Wi\+Fi\+Client\+Secure \mbox{\hyperlink{aws_8cpp_a3ab67634fd9f78f1d4c05f69c7a3d613}{esp\+Client}}
+\item 
+char $\ast$ \mbox{\hyperlink{aws_8cpp_a53f5a68652edd5cc28b5498767b5c142}{p\+Read\+\_\+cert}}
+\item 
+char $\ast$ \mbox{\hyperlink{aws_8cpp_a000576dc9288a7d17621154d0f2464d3}{p\+Read\+\_\+privatekey}}
+\item 
+char $\ast$ \mbox{\hyperlink{aws_8cpp_a5c657da0b2c6d3eb5425bb30527e61b4}{p\+Read\+\_\+rootca}}
+\item 
+String \mbox{\hyperlink{aws_8cpp_a0958012994f1cad888017cabcfefe239}{Read\+\_\+cert}}
+\item 
+String \mbox{\hyperlink{aws_8cpp_a8c19a69cb3f07236b6575f924ebf678e}{Read\+\_\+privatekey}}
+\item 
+String \mbox{\hyperlink{aws_8cpp_a7b655607207387842cf5bf9f881af61c}{Read\+\_\+rootca}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A\+WS module to configure send and receive messages from A\+WS cloud. 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Akshay Godase 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/09-\/202
+\end{DoxyDate}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{aws_8cpp_a7d02120bc3a9639236a24d6c29f7b8ee}\label{aws_8cpp_a7d02120bc3a9639236a24d6c29f7b8ee}} 
+\index{aws.cpp@{aws.cpp}!aws\_callback@{aws\_callback}}
+\index{aws\_callback@{aws\_callback}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_callback()}{aws\_callback()}}
+{\footnotesize\ttfamily static void aws\+\_\+callback (\begin{DoxyParamCaption}\item[{char $\ast$}]{topic,  }\item[{byte $\ast$}]{payload,  }\item[{unsigned int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+callback function getting called whenever message received from A\+WS thing 
+
+\DoxyHorRuler{0}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & from which data is getting received \\
+\hline
+{\em payload} & message received \\
+\hline
+{\em length} & of message received\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Toggle the led once message is received
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36                                                                           \{}
+\DoxyCodeLine{37     Serial.print(\textcolor{stringliteral}{"{}Message arrived ["{}});}
+\DoxyCodeLine{38     Serial.print(topic);}
+\DoxyCodeLine{39     Serial.print(\textcolor{stringliteral}{"{}] "{}});}
+\DoxyCodeLine{40     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < length; i++) \{}
+\DoxyCodeLine{41         Serial.print((\textcolor{keywordtype}{char})\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}}[i]);}
+\DoxyCodeLine{42     \}}
+\DoxyCodeLine{43     Serial.println();}
+\DoxyCodeLine{45     \mbox{\hyperlink{led_8cpp_ac0efcdb1c06107e6a2335b7acd48fa2b}{led\_toggle\_pin}}();}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8cpp_acf0e2d6abfa54ef5a02614497a122757}\label{aws_8cpp_acf0e2d6abfa54ef5a02614497a122757}} 
+\index{aws.cpp@{aws.cpp}!aws\_check\_if\_connected@{aws\_check\_if\_connected}}
+\index{aws\_check\_if\_connected@{aws\_check\_if\_connected}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_check\_if\_connected()}{aws\_check\_if\_connected()}}
+{\footnotesize\ttfamily void aws\+\_\+check\+\_\+if\+\_\+connected (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to ensure if A\+WS client is connected. If not connected reconnect it. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{203                                  \{}
+\DoxyCodeLine{204     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.connected()) \{}
+\DoxyCodeLine{205         \mbox{\hyperlink{aws_8cpp_a9a273d1fef86e42b8aef00447153f31f}{aws\_reconnect}}();}
+\DoxyCodeLine{206     \}}
+\DoxyCodeLine{207     \mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.loop();}
+\DoxyCodeLine{208 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8cpp_a4f58dc8412e8947a07c9dcce9bc4ce67}\label{aws_8cpp_a4f58dc8412e8947a07c9dcce9bc4ce67}} 
+\index{aws.cpp@{aws.cpp}!aws\_configure\_client@{aws\_configure\_client}}
+\index{aws\_configure\_client@{aws\_configure\_client}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_configure\_client()}{aws\_configure\_client()}}
+{\footnotesize\ttfamily static void aws\+\_\+configure\+\_\+client (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This function will be called after certificates are read from S\+P\+I\+F\+FS. It will configure according to certificate data. 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{180 \{}
+\DoxyCodeLine{181     \mbox{\hyperlink{aws_8cpp_a3ab67634fd9f78f1d4c05f69c7a3d613}{espClient}}.setCACert(\mbox{\hyperlink{aws_8cpp_a5c657da0b2c6d3eb5425bb30527e61b4}{pRead\_rootca}});}
+\DoxyCodeLine{182     \mbox{\hyperlink{aws_8cpp_a3ab67634fd9f78f1d4c05f69c7a3d613}{espClient}}.setCertificate(\mbox{\hyperlink{aws_8cpp_a53f5a68652edd5cc28b5498767b5c142}{pRead\_cert}});}
+\DoxyCodeLine{183     \mbox{\hyperlink{aws_8cpp_a3ab67634fd9f78f1d4c05f69c7a3d613}{espClient}}.setPrivateKey(\mbox{\hyperlink{aws_8cpp_a000576dc9288a7d17621154d0f2464d3}{pRead\_privatekey}});}
+\DoxyCodeLine{184     \mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.setServer(\mbox{\hyperlink{aws_8h_a977bd2592e99309a86e7034189e9e62d}{MQTT\_SERVER}}, \mbox{\hyperlink{aws_8h_aa8632baff6bbb5004385998918f1e6bd}{MQTT\_PORT}});}
+\DoxyCodeLine{185     \mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.setCallback(\mbox{\hyperlink{aws_8cpp_a7d02120bc3a9639236a24d6c29f7b8ee}{aws\_callback}});}
+\DoxyCodeLine{186     delay(2000);}
+\DoxyCodeLine{187 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8cpp_af93d078d69a1aec27b696444fdf146e1}\label{aws_8cpp_af93d078d69a1aec27b696444fdf146e1}} 
+\index{aws.cpp@{aws.cpp}!aws\_init@{aws\_init}}
+\index{aws\_init@{aws\_init}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_init()}{aws\_init()}}
+{\footnotesize\ttfamily void aws\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function will initialize all the necessary components for A\+WS. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{214 \{}
+\DoxyCodeLine{215     \mbox{\hyperlink{aws_8cpp_a093d9e86c45f3e96d9062727b04b589f}{aws\_read\_certificates}}();}
+\DoxyCodeLine{216     \mbox{\hyperlink{aws_8cpp_a4f58dc8412e8947a07c9dcce9bc4ce67}{aws\_configure\_client}}();}
+\DoxyCodeLine{217     \mbox{\hyperlink{aws_8cpp_a9a273d1fef86e42b8aef00447153f31f}{aws\_reconnect}}();}
+\DoxyCodeLine{218 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8cpp_a3bf70efa4d06415cef2bce63808004cd}\label{aws_8cpp_a3bf70efa4d06415cef2bce63808004cd}} 
+\index{aws.cpp@{aws.cpp}!aws\_print\_certificates@{aws\_print\_certificates}}
+\index{aws\_print\_certificates@{aws\_print\_certificates}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_print\_certificates()}{aws\_print\_certificates()}}
+{\footnotesize\ttfamily static void aws\+\_\+print\+\_\+certificates (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+function will print all the certificates read from S\+P\+I\+FF 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55     \mbox{\hyperlink{aws_8cpp_a5c657da0b2c6d3eb5425bb30527e61b4}{pRead\_rootca}} = (\textcolor{keywordtype}{char} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * (\mbox{\hyperlink{aws_8cpp_a7b655607207387842cf5bf9f881af61c}{Read\_rootca}}.length() + 1));}
+\DoxyCodeLine{56     strcpy(\mbox{\hyperlink{aws_8cpp_a5c657da0b2c6d3eb5425bb30527e61b4}{pRead\_rootca}}, \mbox{\hyperlink{aws_8cpp_a7b655607207387842cf5bf9f881af61c}{Read\_rootca}}.c\_str());}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \mbox{\hyperlink{aws_8cpp_a53f5a68652edd5cc28b5498767b5c142}{pRead\_cert}} = (\textcolor{keywordtype}{char} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * (\mbox{\hyperlink{aws_8cpp_a0958012994f1cad888017cabcfefe239}{Read\_cert}}.length() + 1));}
+\DoxyCodeLine{59     strcpy(\mbox{\hyperlink{aws_8cpp_a53f5a68652edd5cc28b5498767b5c142}{pRead\_cert}}, \mbox{\hyperlink{aws_8cpp_a0958012994f1cad888017cabcfefe239}{Read\_cert}}.c\_str());}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \mbox{\hyperlink{aws_8cpp_a000576dc9288a7d17621154d0f2464d3}{pRead\_privatekey}} = (\textcolor{keywordtype}{char} *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}) * (\mbox{\hyperlink{aws_8cpp_a8c19a69cb3f07236b6575f924ebf678e}{Read\_privatekey}}.length() + 1));}
+\DoxyCodeLine{62     strcpy(\mbox{\hyperlink{aws_8cpp_a000576dc9288a7d17621154d0f2464d3}{pRead\_privatekey}}, \mbox{\hyperlink{aws_8cpp_a8c19a69cb3f07236b6575f924ebf678e}{Read\_privatekey}}.c\_str());}
+\DoxyCodeLine{63     }
+\DoxyCodeLine{64     Serial.println(\textcolor{stringliteral}{"{}================================================================================================"{}});}
+\DoxyCodeLine{65     Serial.println(\textcolor{stringliteral}{"{}Certificates that passing to espClient Method"{}});}
+\DoxyCodeLine{66     Serial.println();}
+\DoxyCodeLine{67     Serial.println(\textcolor{stringliteral}{"{}Root CA:"{}});}
+\DoxyCodeLine{68     Serial.write(\mbox{\hyperlink{aws_8cpp_a5c657da0b2c6d3eb5425bb30527e61b4}{pRead\_rootca}});}
+\DoxyCodeLine{69     Serial.println(\textcolor{stringliteral}{"{}================================================================================================"{}});}
+\DoxyCodeLine{70     Serial.println();}
+\DoxyCodeLine{71     Serial.println(\textcolor{stringliteral}{"{}Cert:"{}});}
+\DoxyCodeLine{72     Serial.write(\mbox{\hyperlink{aws_8cpp_a53f5a68652edd5cc28b5498767b5c142}{pRead\_cert}});}
+\DoxyCodeLine{73     Serial.println(\textcolor{stringliteral}{"{}================================================================================================"{}});}
+\DoxyCodeLine{74     Serial.println();}
+\DoxyCodeLine{75     Serial.println(\textcolor{stringliteral}{"{}privateKey:"{}});}
+\DoxyCodeLine{76     Serial.write(\mbox{\hyperlink{aws_8cpp_a000576dc9288a7d17621154d0f2464d3}{pRead\_privatekey}});}
+\DoxyCodeLine{77     Serial.println(\textcolor{stringliteral}{"{}================================================================================================"{}});}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8cpp_acda02faadbba59fcacff34f62dd36282}\label{aws_8cpp_acda02faadbba59fcacff34f62dd36282}} 
+\index{aws.cpp@{aws.cpp}!aws\_publish@{aws\_publish}}
+\index{aws\_publish@{aws\_publish}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_publish()}{aws\_publish()}}
+{\footnotesize\ttfamily void aws\+\_\+publish (\begin{DoxyParamCaption}\item[{char $\ast$}]{payload }\end{DoxyParamCaption})}
+
+
+
+Function to publish on A\+WS cloud configured. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em payload} & \+: pointer to message to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{194                                \{}
+\DoxyCodeLine{195     \mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.publish(\mbox{\hyperlink{aws_8h_a400d28e1af2bcd57bf651dc23290a6d3}{MQTT\_TOPIC}},\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{196 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8cpp_a093d9e86c45f3e96d9062727b04b589f}\label{aws_8cpp_a093d9e86c45f3e96d9062727b04b589f}} 
+\index{aws.cpp@{aws.cpp}!aws\_read\_certificates@{aws\_read\_certificates}}
+\index{aws\_read\_certificates@{aws\_read\_certificates}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_read\_certificates()}{aws\_read\_certificates()}}
+{\footnotesize\ttfamily static void aws\+\_\+read\+\_\+certificates (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+function will read all the certificates read from S\+P\+I\+FF these certificates are necessary for A\+WS client connection. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+print all the certificates after read from S\+P\+I\+F\+Fs
+\begin{DoxyCode}{0}
+\DoxyCodeLine{86 \{}
+\DoxyCodeLine{87     \textcolor{keywordflow}{if} (!SPIFFS.begin(\textcolor{keyword}{true})) \{}
+\DoxyCodeLine{88         Serial.println(\textcolor{stringliteral}{"{}An Error has occurred while mounting SPIFFS"{}});}
+\DoxyCodeLine{89     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{comment}{//Root CA File Reading.}}
+\DoxyCodeLine{93     File file2 = SPIFFS.open(\textcolor{stringliteral}{"{}/AmazonRootCA1.pem"{}}, \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{94     \textcolor{keywordflow}{if} (!file2) \{}
+\DoxyCodeLine{95         Serial.println(\textcolor{stringliteral}{"{}Failed to open file for reading"{}});}
+\DoxyCodeLine{96         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98     Serial.println(\textcolor{stringliteral}{"{}Root CA File Content:"{}});}
+\DoxyCodeLine{99     \textcolor{keywordflow}{while} (file2.available()) \{}
+\DoxyCodeLine{100     \mbox{\hyperlink{aws_8cpp_a7b655607207387842cf5bf9f881af61c}{Read\_rootca}} = file2.readString();}
+\DoxyCodeLine{101         Serial.println(\mbox{\hyperlink{aws_8cpp_a7b655607207387842cf5bf9f881af61c}{Read\_rootca}});}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     \textcolor{comment}{// Cert file reading}}
+\DoxyCodeLine{105     File file4 = SPIFFS.open(\textcolor{stringliteral}{"{}/89da432624-\/certificate.pem.crt"{}}, \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{106     \textcolor{keywordflow}{if} (!file4) \{}
+\DoxyCodeLine{107         Serial.println(\textcolor{stringliteral}{"{}Failed to open file for reading"{}});}
+\DoxyCodeLine{108         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{110     Serial.println(\textcolor{stringliteral}{"{}Cert File Content:"{}});}
+\DoxyCodeLine{111     \textcolor{keywordflow}{while} (file4.available()) \{}
+\DoxyCodeLine{112         \mbox{\hyperlink{aws_8cpp_a0958012994f1cad888017cabcfefe239}{Read\_cert}} = file4.readString();}
+\DoxyCodeLine{113         Serial.println(\mbox{\hyperlink{aws_8cpp_a0958012994f1cad888017cabcfefe239}{Read\_cert}});}
+\DoxyCodeLine{114     \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \textcolor{comment}{//Privatekey file reading}}
+\DoxyCodeLine{117     File file6 = SPIFFS.open(\textcolor{stringliteral}{"{}/89da432624-\/private.pem.key"{}}, \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{118     \textcolor{keywordflow}{if} (!file6) \{}
+\DoxyCodeLine{119         Serial.println(\textcolor{stringliteral}{"{}Failed to open file for reading"{}});}
+\DoxyCodeLine{120         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{121     \}}
+\DoxyCodeLine{122     Serial.println(\textcolor{stringliteral}{"{}privateKey File Content:"{}});}
+\DoxyCodeLine{123     \textcolor{keywordflow}{while} (file6.available()) \{}
+\DoxyCodeLine{124         \mbox{\hyperlink{aws_8cpp_a8c19a69cb3f07236b6575f924ebf678e}{Read\_privatekey}} = file6.readString();}
+\DoxyCodeLine{125         Serial.println(\mbox{\hyperlink{aws_8cpp_a8c19a69cb3f07236b6575f924ebf678e}{Read\_privatekey}});}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{128     \mbox{\hyperlink{aws_8cpp_a3bf70efa4d06415cef2bce63808004cd}{aws\_print\_certificates}}();}
+\DoxyCodeLine{129 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8cpp_a9a273d1fef86e42b8aef00447153f31f}\label{aws_8cpp_a9a273d1fef86e42b8aef00447153f31f}} 
+\index{aws.cpp@{aws.cpp}!aws\_reconnect@{aws\_reconnect}}
+\index{aws\_reconnect@{aws\_reconnect}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{aws\_reconnect()}{aws\_reconnect()}}
+{\footnotesize\ttfamily static void aws\+\_\+reconnect (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This function will be called whenever A\+WS client is disconnected to reconnect again. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Reset the L\+ED for indication
+
+W\+I\+FI connection needs to be intact so verify W\+I\+FI first
+
+Set the L\+ED for indication
+\begin{DoxyCode}{0}
+\DoxyCodeLine{136                                 \{}
+\DoxyCodeLine{137   \textcolor{comment}{// Loop until we're reconnected}}
+\DoxyCodeLine{138   \textcolor{keywordflow}{while} (!\mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.connected()) \{}
+\DoxyCodeLine{140     \mbox{\hyperlink{led_8h_a07f154800251310170af6eb2d2130ae3}{led\_reset\_AWS\_connected\_pin}}();}
+\DoxyCodeLine{141     \mbox{\hyperlink{led_8h_afee46c25e79465f3d3f4e2131546f668}{led\_reset\_status\_pin}}();}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{145     Serial.println(\textcolor{stringliteral}{"{}Check Wifi status first!"{}});}
+\DoxyCodeLine{146     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{wifi_8cpp_a026bf82fbb2168cd5ea7447afce0dd9b}{wifi\_check\_status}}()) \{}
+\DoxyCodeLine{147       \mbox{\hyperlink{wifi_8cpp_a7267cf9f0ba503d904709977c18a07ea}{wifi\_init}}();}
+\DoxyCodeLine{148       delay(2000);}
+\DoxyCodeLine{149     \}}
+\DoxyCodeLine{150     Serial.print(\textcolor{stringliteral}{"{}Attempting MQTT connection..."{}});}
+\DoxyCodeLine{151     \textcolor{comment}{// Create a random client ID}}
+\DoxyCodeLine{152     String clientId = \textcolor{stringliteral}{"{}ESP32-\/"{}};}
+\DoxyCodeLine{153     clientId += String(random(0xffff), HEX);}
+\DoxyCodeLine{154     \textcolor{comment}{// Attempt to connect}}
+\DoxyCodeLine{155     \textcolor{keywordflow}{if} (\mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.connect(clientId.c\_str())) \{}
+\DoxyCodeLine{156       Serial.println(\textcolor{stringliteral}{"{}connected"{}});}
+\DoxyCodeLine{157       \textcolor{comment}{// Once connected, publish an announcement...}}
+\DoxyCodeLine{158       \mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.publish(\mbox{\hyperlink{aws_8h_a400d28e1af2bcd57bf651dc23290a6d3}{MQTT\_TOPIC}}, \textcolor{stringliteral}{"{}hello world"{}});}
+\DoxyCodeLine{159       \textcolor{comment}{// ... and resubscribe}}
+\DoxyCodeLine{160       \mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.subscribe(\mbox{\hyperlink{aws_8h_a338c3fe987a321bb7bfac3f0b4a8cfab}{MQTT\_GET\_DATA\_TOPIC}});}
+\DoxyCodeLine{161     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{162       Serial.print(\textcolor{stringliteral}{"{}failed, rc="{}});}
+\DoxyCodeLine{163       Serial.print(\mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.state());}
+\DoxyCodeLine{164       Serial.println(\textcolor{stringliteral}{"{} try again in 5 seconds"{}});}
+\DoxyCodeLine{165       \textcolor{comment}{// Wait 5 seconds before retrying}}
+\DoxyCodeLine{166       delay(5000);}
+\DoxyCodeLine{167     \}}
+\DoxyCodeLine{168   \}}
+\DoxyCodeLine{170   \mbox{\hyperlink{led_8h_a464099595b1ef5b54c56a7ef0e3cbec7}{led\_set\_AWS\_connected\_pin}}();}
+\DoxyCodeLine{171 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8cpp_aee63e84c606cfaefce454689113c636c}\label{aws_8cpp_aee63e84c606cfaefce454689113c636c}} 
+\index{aws.cpp@{aws.cpp}!client@{client}}
+\index{client@{client}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{client()}{client()}}
+{\footnotesize\ttfamily Pub\+Sub\+Client client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{aws_8cpp_a3ab67634fd9f78f1d4c05f69c7a3d613}{esp\+Client}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{aws_8cpp_a3ab67634fd9f78f1d4c05f69c7a3d613}\label{aws_8cpp_a3ab67634fd9f78f1d4c05f69c7a3d613}} 
+\index{aws.cpp@{aws.cpp}!espClient@{espClient}}
+\index{espClient@{espClient}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{espClient}{espClient}}
+{\footnotesize\ttfamily Wi\+Fi\+Client\+Secure esp\+Client}
+
+\mbox{\Hypertarget{aws_8cpp_a53f5a68652edd5cc28b5498767b5c142}\label{aws_8cpp_a53f5a68652edd5cc28b5498767b5c142}} 
+\index{aws.cpp@{aws.cpp}!pRead\_cert@{pRead\_cert}}
+\index{pRead\_cert@{pRead\_cert}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{pRead\_cert}{pRead\_cert}}
+{\footnotesize\ttfamily char$\ast$ p\+Read\+\_\+cert}
+
+\mbox{\Hypertarget{aws_8cpp_a000576dc9288a7d17621154d0f2464d3}\label{aws_8cpp_a000576dc9288a7d17621154d0f2464d3}} 
+\index{aws.cpp@{aws.cpp}!pRead\_privatekey@{pRead\_privatekey}}
+\index{pRead\_privatekey@{pRead\_privatekey}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{pRead\_privatekey}{pRead\_privatekey}}
+{\footnotesize\ttfamily char$\ast$ p\+Read\+\_\+privatekey}
+
+\mbox{\Hypertarget{aws_8cpp_a5c657da0b2c6d3eb5425bb30527e61b4}\label{aws_8cpp_a5c657da0b2c6d3eb5425bb30527e61b4}} 
+\index{aws.cpp@{aws.cpp}!pRead\_rootca@{pRead\_rootca}}
+\index{pRead\_rootca@{pRead\_rootca}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{pRead\_rootca}{pRead\_rootca}}
+{\footnotesize\ttfamily char$\ast$ p\+Read\+\_\+rootca}
+
+pointers to print certificates \mbox{\Hypertarget{aws_8cpp_a0958012994f1cad888017cabcfefe239}\label{aws_8cpp_a0958012994f1cad888017cabcfefe239}} 
+\index{aws.cpp@{aws.cpp}!Read\_cert@{Read\_cert}}
+\index{Read\_cert@{Read\_cert}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{Read\_cert}{Read\_cert}}
+{\footnotesize\ttfamily String Read\+\_\+cert}
+
+\mbox{\Hypertarget{aws_8cpp_a8c19a69cb3f07236b6575f924ebf678e}\label{aws_8cpp_a8c19a69cb3f07236b6575f924ebf678e}} 
+\index{aws.cpp@{aws.cpp}!Read\_privatekey@{Read\_privatekey}}
+\index{Read\_privatekey@{Read\_privatekey}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{Read\_privatekey}{Read\_privatekey}}
+{\footnotesize\ttfamily String Read\+\_\+privatekey}
+
+\mbox{\Hypertarget{aws_8cpp_a7b655607207387842cf5bf9f881af61c}\label{aws_8cpp_a7b655607207387842cf5bf9f881af61c}} 
+\index{aws.cpp@{aws.cpp}!Read\_rootca@{Read\_rootca}}
+\index{Read\_rootca@{Read\_rootca}!aws.cpp@{aws.cpp}}
+\doxysubsubsection{\texorpdfstring{Read\_rootca}{Read\_rootca}}
+{\footnotesize\ttfamily String Read\+\_\+rootca}
+
+Strings to maintain certificates 

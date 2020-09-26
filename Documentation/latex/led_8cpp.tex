@@ -1,0 +1,145 @@
+\hypertarget{led_8cpp}{}\doxysection{C\+:/\+Users/aksha/\+Documents/\+Akshay/\+Projects/\+Smart\+\_\+solutions/\+Akshay\+\_\+data/\+E\+S\+P32/\+New\+Code\+\_\+\+\_\+\+Pub\+\_\+sub/pub\+\_\+sub/led.cpp File Reference}
+\label{led_8cpp}\index{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/led.cpp@{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/led.cpp}}
+
+
+L\+ED module is used to configure the L\+E\+Ds connected. Function declarations to set or reset L\+E\+Ds.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led_8cpp_a45a4dce2a793aa9be79132acc6527869}{led\+\_\+setup}} (void)
+\begin{DoxyCompactList}\small\item\em Initialization sequence to configure all L\+E\+Ds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{led_8cpp_ac0efcdb1c06107e6a2335b7acd48fa2b}{led\+\_\+toggle\+\_\+pin}} (void)
+\begin{DoxyCompactList}\small\item\em Toggle interface to toggle msg\+\_\+received pin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{led_8cpp_a003d0709ca32748a854f13ffaf661946}{led\+\_\+toggle\+\_\+status\+\_\+pin}} (void)
+\begin{DoxyCompactList}\small\item\em This interface will toggle status pin. It checks flag status\+\_\+led and toggles the status L\+ED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{led_8cpp_ae7520a5957688f9c1793041e65ffac48}{msg\+\_\+rcvd\+\_\+led}} = false
+\item 
+bool \mbox{\hyperlink{led_8cpp_add6f59153e34803db481e0a103cc223e}{status\+\_\+led}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+L\+ED module is used to configure the L\+E\+Ds connected. Function declarations to set or reset L\+E\+Ds. 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Akshay Godase 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/09-\/202
+\end{DoxyDate}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{led_8cpp_a45a4dce2a793aa9be79132acc6527869}\label{led_8cpp_a45a4dce2a793aa9be79132acc6527869}} 
+\index{led.cpp@{led.cpp}!led\_setup@{led\_setup}}
+\index{led\_setup@{led\_setup}!led.cpp@{led.cpp}}
+\doxysubsubsection{\texorpdfstring{led\_setup()}{led\_setup()}}
+{\footnotesize\ttfamily void led\+\_\+setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialization sequence to configure all L\+E\+Ds. 
+
+function declarations
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56     pinMode(\mbox{\hyperlink{led_8h_a76187f54cdb562b0bf82fe8aca960200}{WIFI\_CONNECTED\_PIN}}, OUTPUT);}
+\DoxyCodeLine{57     pinMode(\mbox{\hyperlink{led_8h_a7afa330d1670d18533303fa6074f0586}{AWS\_CLIENT\_CONNECTED}},  OUTPUT);}
+\DoxyCodeLine{58     pinMode(\mbox{\hyperlink{led_8h_a8694b1fb79236e4f1f2ab8f8e11ad4c5}{MSG\_RCVD}},OUTPUT);}
+\DoxyCodeLine{59     pinMode(\mbox{\hyperlink{led_8h_ada5d5dfeb5398ee8268bb52f84fb717e}{STATUS\_LED}},OUTPUT);}
+\DoxyCodeLine{60     \mbox{\hyperlink{led_8h_a18afe6ea4353734e77cba037aed83489}{led\_reset\_WIFI\_pin}}();}
+\DoxyCodeLine{61     \mbox{\hyperlink{led_8h_a07f154800251310170af6eb2d2130ae3}{led\_reset\_AWS\_connected\_pin}}();}
+\DoxyCodeLine{62     \mbox{\hyperlink{led_8h_aa82ab869f6518488d5738ea3a6dfc55e}{led\_reset\_MSG\_rcvd\_pin}}();}
+\DoxyCodeLine{63     \mbox{\hyperlink{led_8h_afee46c25e79465f3d3f4e2131546f668}{led\_reset\_status\_pin}}();}
+\DoxyCodeLine{64 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{led_8cpp_ac0efcdb1c06107e6a2335b7acd48fa2b}\label{led_8cpp_ac0efcdb1c06107e6a2335b7acd48fa2b}} 
+\index{led.cpp@{led.cpp}!led\_toggle\_pin@{led\_toggle\_pin}}
+\index{led\_toggle\_pin@{led\_toggle\_pin}!led.cpp@{led.cpp}}
+\doxysubsubsection{\texorpdfstring{led\_toggle\_pin()}{led\_toggle\_pin()}}
+{\footnotesize\ttfamily void led\+\_\+toggle\+\_\+pin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Toggle interface to toggle msg\+\_\+received pin. 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39   \textcolor{keywordflow}{if} (\mbox{\hyperlink{led_8cpp_ae7520a5957688f9c1793041e65ffac48}{msg\_rcvd\_led}} == \mbox{\hyperlink{led_8h_a50886ad5e11e48392cbf52b05a0b6c1f}{LED\_LOW}})\{}
+\DoxyCodeLine{40       \mbox{\hyperlink{led_8h_afcd48013315086508b85b5434044f5d7}{led\_set\_MSG\_rcvd\_pin}}();}
+\DoxyCodeLine{41       \mbox{\hyperlink{led_8cpp_ae7520a5957688f9c1793041e65ffac48}{msg\_rcvd\_led}} = \mbox{\hyperlink{led_8h_a6571e43ee2707aed7540119a848a0275}{LED\_HIGH}};}
+\DoxyCodeLine{42   \}}
+\DoxyCodeLine{43   \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{44       \mbox{\hyperlink{led_8h_aa82ab869f6518488d5738ea3a6dfc55e}{led\_reset\_MSG\_rcvd\_pin}}();}
+\DoxyCodeLine{45       \mbox{\hyperlink{led_8cpp_ae7520a5957688f9c1793041e65ffac48}{msg\_rcvd\_led}} = \mbox{\hyperlink{led_8h_a50886ad5e11e48392cbf52b05a0b6c1f}{LED\_LOW}};}
+\DoxyCodeLine{46   \}}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{led_8cpp_a003d0709ca32748a854f13ffaf661946}\label{led_8cpp_a003d0709ca32748a854f13ffaf661946}} 
+\index{led.cpp@{led.cpp}!led\_toggle\_status\_pin@{led\_toggle\_status\_pin}}
+\index{led\_toggle\_status\_pin@{led\_toggle\_status\_pin}!led.cpp@{led.cpp}}
+\doxysubsubsection{\texorpdfstring{led\_toggle\_status\_pin()}{led\_toggle\_status\_pin()}}
+{\footnotesize\ttfamily void led\+\_\+toggle\+\_\+status\+\_\+pin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This interface will toggle status pin. It checks flag status\+\_\+led and toggles the status L\+ED. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                                  \{}
+\DoxyCodeLine{21   \textcolor{keywordflow}{if} (\mbox{\hyperlink{led_8cpp_add6f59153e34803db481e0a103cc223e}{status\_led}} == \mbox{\hyperlink{led_8h_a50886ad5e11e48392cbf52b05a0b6c1f}{LED\_LOW}})\{}
+\DoxyCodeLine{22         \mbox{\hyperlink{led_8h_aab0feaae7aaf96f292bceb2aeeb26243}{led\_set\_status\_pin}}();}
+\DoxyCodeLine{23         \mbox{\hyperlink{led_8cpp_add6f59153e34803db481e0a103cc223e}{status\_led}} = \mbox{\hyperlink{led_8h_a6571e43ee2707aed7540119a848a0275}{LED\_HIGH}};}
+\DoxyCodeLine{24   \}}
+\DoxyCodeLine{25   \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{26       \mbox{\hyperlink{led_8h_afee46c25e79465f3d3f4e2131546f668}{led\_reset\_status\_pin}}();}
+\DoxyCodeLine{27       \mbox{\hyperlink{led_8cpp_add6f59153e34803db481e0a103cc223e}{status\_led}} = \mbox{\hyperlink{led_8h_a50886ad5e11e48392cbf52b05a0b6c1f}{LED\_LOW}};}
+\DoxyCodeLine{28   \}}
+\DoxyCodeLine{29 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{led_8cpp_ae7520a5957688f9c1793041e65ffac48}\label{led_8cpp_ae7520a5957688f9c1793041e65ffac48}} 
+\index{led.cpp@{led.cpp}!msg\_rcvd\_led@{msg\_rcvd\_led}}
+\index{msg\_rcvd\_led@{msg\_rcvd\_led}!led.cpp@{led.cpp}}
+\doxysubsubsection{\texorpdfstring{msg\_rcvd\_led}{msg\_rcvd\_led}}
+{\footnotesize\ttfamily bool msg\+\_\+rcvd\+\_\+led = false}
+
+status maintaining flags \mbox{\Hypertarget{led_8cpp_add6f59153e34803db481e0a103cc223e}\label{led_8cpp_add6f59153e34803db481e0a103cc223e}} 
+\index{led.cpp@{led.cpp}!status\_led@{status\_led}}
+\index{status\_led@{status\_led}!led.cpp@{led.cpp}}
+\doxysubsubsection{\texorpdfstring{status\_led}{status\_led}}
+{\footnotesize\ttfamily bool status\+\_\+led = false}
+

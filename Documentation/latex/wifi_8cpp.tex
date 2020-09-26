@@ -1,0 +1,158 @@
+\hypertarget{wifi_8cpp}{}\doxysection{C\+:/\+Users/aksha/\+Documents/\+Akshay/\+Projects/\+Smart\+\_\+solutions/\+Akshay\+\_\+data/\+E\+S\+P32/\+New\+Code\+\_\+\+\_\+\+Pub\+\_\+sub/pub\+\_\+sub/wifi.cpp File Reference}
+\label{wifi_8cpp}\index{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/wifi.cpp@{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/wifi.cpp}}
+
+
+W\+I\+FI module has all necessary definitions for W\+I\+FI initializations.  
+
+
+{\ttfamily \#include \char`\"{}wifi.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{wifi_8cpp_a026bf82fbb2168cd5ea7447afce0dd9b}{wifi\+\_\+check\+\_\+status}} (void)
+\begin{DoxyCompactList}\small\item\em This function returns the status of W\+I\+FI connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8cpp_a7267cf9f0ba503d904709977c18a07ea}{wifi\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em This function initialize W\+I\+FI connection. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{wifi_8cpp_ac4beff07de7384aa2e6f17148cf15b61}{wifi\+\_\+print\+\_\+mac\+\_\+string}} (void)
+\begin{DoxyCompactList}\small\item\em This interface prints M\+AC ID of W\+I\+FI connected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+byte \mbox{\hyperlink{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}{mac}} \mbox{[}6\mbox{]}
+\item 
+char \mbox{\hyperlink{wifi_8cpp_a4b1981e80279b4f3d26bc18c1b4aea2b}{pswd}} \mbox{[}64\mbox{]} = \{\}
+\item 
+char \mbox{\hyperlink{wifi_8cpp_a5268b07a2715992416b0af11a06f1bf7}{ssid}} \mbox{[}64\mbox{]} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+W\+I\+FI module has all necessary definitions for W\+I\+FI initializations. 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Akshay Godase 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/09-\/202
+\end{DoxyDate}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{wifi_8cpp_a026bf82fbb2168cd5ea7447afce0dd9b}\label{wifi_8cpp_a026bf82fbb2168cd5ea7447afce0dd9b}} 
+\index{wifi.cpp@{wifi.cpp}!wifi\_check\_status@{wifi\_check\_status}}
+\index{wifi\_check\_status@{wifi\_check\_status}!wifi.cpp@{wifi.cpp}}
+\doxysubsubsection{\texorpdfstring{wifi\_check\_status()}{wifi\_check\_status()}}
+{\footnotesize\ttfamily bool wifi\+\_\+check\+\_\+status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function returns the status of W\+I\+FI connection. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+true \+: W\+I\+FI connected false \+: W\+I\+FI not connected 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37   \textcolor{keywordflow}{if} (WiFi.status() == WL\_CONNECTED)  \{}
+\DoxyCodeLine{38     Serial.println(\textcolor{stringliteral}{"{}WiFi is connected!\(\backslash\)n"{}});}
+\DoxyCodeLine{39     \mbox{\hyperlink{led_8h_add7f7cad877cd425b2fc59471ef36a0f}{led\_set\_WIFI\_pin}}();}
+\DoxyCodeLine{40     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{41   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{42     Serial.println(\textcolor{stringliteral}{"{}WiFi is disconnected!\(\backslash\)n"{}});}
+\DoxyCodeLine{43     \mbox{\hyperlink{led_8h_a18afe6ea4353734e77cba037aed83489}{led\_reset\_WIFI\_pin}}();}
+\DoxyCodeLine{44     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{45   \}}
+\DoxyCodeLine{46 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8cpp_a7267cf9f0ba503d904709977c18a07ea}\label{wifi_8cpp_a7267cf9f0ba503d904709977c18a07ea}} 
+\index{wifi.cpp@{wifi.cpp}!wifi\_init@{wifi\_init}}
+\index{wifi\_init@{wifi\_init}!wifi.cpp@{wifi.cpp}}
+\doxysubsubsection{\texorpdfstring{wifi\_init()}{wifi\_init()}}
+{\footnotesize\ttfamily void wifi\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initialize W\+I\+FI connection. 
+
+function declarations
+
+\DoxyHorRuler{0}
+ reset W\+I\+FI L\+ED
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51                      \{}
+\DoxyCodeLine{53     \mbox{\hyperlink{led_8h_a18afe6ea4353734e77cba037aed83489}{led\_reset\_WIFI\_pin}}();}
+\DoxyCodeLine{54     \mbox{\hyperlink{led_8h_afee46c25e79465f3d3f4e2131546f668}{led\_reset\_status\_pin}}();}
+\DoxyCodeLine{55     delay(10);}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     Serial.print(\textcolor{stringliteral}{"{}Connecting to "{}});}
+\DoxyCodeLine{58     Serial.println(\mbox{\hyperlink{wifi_8cpp_a5268b07a2715992416b0af11a06f1bf7}{ssid}});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     WiFi.begin(\mbox{\hyperlink{wifi_8cpp_a5268b07a2715992416b0af11a06f1bf7}{ssid}}, \mbox{\hyperlink{wifi_8cpp_a4b1981e80279b4f3d26bc18c1b4aea2b}{pswd}});}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{keywordflow}{while} (WiFi.status() != WL\_CONNECTED) \{}
+\DoxyCodeLine{63         delay(500);}
+\DoxyCodeLine{64         Serial.print(\textcolor{stringliteral}{"{}."{}});}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     randomSeed(micros());}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     Serial.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{70     Serial.println(\textcolor{stringliteral}{"{}WiFi connected"{}});}
+\DoxyCodeLine{71     Serial.println(\textcolor{stringliteral}{"{}IP address: "{}});}
+\DoxyCodeLine{72     Serial.println(WiFi.localIP());}
+\DoxyCodeLine{73     \mbox{\hyperlink{led_8h_add7f7cad877cd425b2fc59471ef36a0f}{led\_set\_WIFI\_pin}}();}
+\DoxyCodeLine{74     \mbox{\hyperlink{wifi_8cpp_ac4beff07de7384aa2e6f17148cf15b61}{wifi\_print\_mac\_string}}();}
+\DoxyCodeLine{75 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8cpp_ac4beff07de7384aa2e6f17148cf15b61}\label{wifi_8cpp_ac4beff07de7384aa2e6f17148cf15b61}} 
+\index{wifi.cpp@{wifi.cpp}!wifi\_print\_mac\_string@{wifi\_print\_mac\_string}}
+\index{wifi\_print\_mac\_string@{wifi\_print\_mac\_string}!wifi.cpp@{wifi.cpp}}
+\doxysubsubsection{\texorpdfstring{wifi\_print\_mac\_string()}{wifi\_print\_mac\_string()}}
+{\footnotesize\ttfamily static void wifi\+\_\+print\+\_\+mac\+\_\+string (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This interface prints M\+AC ID of W\+I\+FI connected. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23   \textcolor{keywordtype}{char} mac\_Id[128];}
+\DoxyCodeLine{24     WiFi.macAddress(\mbox{\hyperlink{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}{mac}});}
+\DoxyCodeLine{25     snprintf(mac\_Id, \textcolor{keyword}{sizeof}(mac\_Id), \textcolor{stringliteral}{"{}\%02x:\%02x:\%02x:\%02x:\%02x:\%02x"{}},}
+\DoxyCodeLine{26            \mbox{\hyperlink{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}{mac}}[0], \mbox{\hyperlink{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}{mac}}[1], \mbox{\hyperlink{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}{mac}}[2], \mbox{\hyperlink{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}{mac}}[3], \mbox{\hyperlink{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}{mac}}[4], \mbox{\hyperlink{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}{mac}}[5]);}
+\DoxyCodeLine{27     Serial.print(mac\_Id);}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}\label{wifi_8cpp_a775118f5b90a904c7e65066faabab1a2}} 
+\index{wifi.cpp@{wifi.cpp}!mac@{mac}}
+\index{mac@{mac}!wifi.cpp@{wifi.cpp}}
+\doxysubsubsection{\texorpdfstring{mac}{mac}}
+{\footnotesize\ttfamily byte mac\mbox{[}6\mbox{]}}
+
+Saves M\+AC ID \mbox{\Hypertarget{wifi_8cpp_a4b1981e80279b4f3d26bc18c1b4aea2b}\label{wifi_8cpp_a4b1981e80279b4f3d26bc18c1b4aea2b}} 
+\index{wifi.cpp@{wifi.cpp}!pswd@{pswd}}
+\index{pswd@{pswd}!wifi.cpp@{wifi.cpp}}
+\doxysubsubsection{\texorpdfstring{pswd}{pswd}}
+{\footnotesize\ttfamily char pswd\mbox{[}64\mbox{]} = \{\}}
+
+W\+I\+FI Password \mbox{\Hypertarget{wifi_8cpp_a5268b07a2715992416b0af11a06f1bf7}\label{wifi_8cpp_a5268b07a2715992416b0af11a06f1bf7}} 
+\index{wifi.cpp@{wifi.cpp}!ssid@{ssid}}
+\index{ssid@{ssid}!wifi.cpp@{wifi.cpp}}
+\doxysubsubsection{\texorpdfstring{ssid}{ssid}}
+{\footnotesize\ttfamily char ssid\mbox{[}64\mbox{]} = \{\}}
+
+W\+I\+FI S\+S\+ID 

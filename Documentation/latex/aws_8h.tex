@@ -1,0 +1,160 @@
+\hypertarget{aws_8h}{}\doxysection{C\+:/\+Users/aksha/\+Documents/\+Akshay/\+Projects/\+Smart\+\_\+solutions/\+Akshay\+\_\+data/\+E\+S\+P32/\+New\+Code\+\_\+\+\_\+\+Pub\+\_\+sub/pub\+\_\+sub/aws.h File Reference}
+\label{aws_8h}\index{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/aws.h@{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/aws.h}}
+
+
+header file for the declarations necessary for A\+WS module  
+
+
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wifi.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{aws_8h_a338c3fe987a321bb7bfac3f0b4a8cfab}{M\+Q\+T\+T\+\_\+\+G\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+O\+P\+IC}}~\char`\"{}akshay\+\_\+trial2\+\_\+test\+\_\+rx\char`\"{}
+\begin{DoxyCompactList}\small\item\em topic to receive message \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{aws_8h_aa8632baff6bbb5004385998918f1e6bd}{M\+Q\+T\+T\+\_\+\+P\+O\+RT}}~8883
+\begin{DoxyCompactList}\small\item\em port for communication \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{aws_8h_a977bd2592e99309a86e7034189e9e62d}{M\+Q\+T\+T\+\_\+\+S\+E\+R\+V\+ER}}~\char`\"{}a21w079cqlmaf8-\/ats.\+iot.\+ap-\/south-\/1.amazonaws.\+com\char`\"{}
+\begin{DoxyCompactList}\small\item\em A\+WS end point of A\+WS thing. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{aws_8h_a400d28e1af2bcd57bf651dc23290a6d3}{M\+Q\+T\+T\+\_\+\+T\+O\+P\+IC}}~\char`\"{}akshay\+\_\+trial2\+\_\+test\char`\"{}
+\begin{DoxyCompactList}\small\item\em topic to send message \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{aws_8h_a47c9ff3cc6b99f3637d8a667249192cb}{aws\+\_\+check\+\_\+if\+\_\+connected}} ()
+\begin{DoxyCompactList}\small\item\em Function to ensure if A\+WS client is connected. If not connected reconnect it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{aws_8h_af93d078d69a1aec27b696444fdf146e1}{aws\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Function will initialize all the necessary components for A\+WS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{aws_8h_acda02faadbba59fcacff34f62dd36282}{aws\+\_\+publish}} (char $\ast$\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}})
+\begin{DoxyCompactList}\small\item\em Function to publish on A\+WS cloud configured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+header file for the declarations necessary for A\+WS module 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Akshay Godase 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/09-\/202
+\end{DoxyDate}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{aws_8h_a338c3fe987a321bb7bfac3f0b4a8cfab}\label{aws_8h_a338c3fe987a321bb7bfac3f0b4a8cfab}} 
+\index{aws.h@{aws.h}!MQTT\_GET\_DATA\_TOPIC@{MQTT\_GET\_DATA\_TOPIC}}
+\index{MQTT\_GET\_DATA\_TOPIC@{MQTT\_GET\_DATA\_TOPIC}!aws.h@{aws.h}}
+\doxysubsubsection{\texorpdfstring{MQTT\_GET\_DATA\_TOPIC}{MQTT\_GET\_DATA\_TOPIC}}
+{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+G\+E\+T\+\_\+\+D\+A\+T\+A\+\_\+\+T\+O\+P\+IC~\char`\"{}akshay\+\_\+trial2\+\_\+test\+\_\+rx\char`\"{}}
+
+
+
+topic to receive message 
+
+\mbox{\Hypertarget{aws_8h_aa8632baff6bbb5004385998918f1e6bd}\label{aws_8h_aa8632baff6bbb5004385998918f1e6bd}} 
+\index{aws.h@{aws.h}!MQTT\_PORT@{MQTT\_PORT}}
+\index{MQTT\_PORT@{MQTT\_PORT}!aws.h@{aws.h}}
+\doxysubsubsection{\texorpdfstring{MQTT\_PORT}{MQTT\_PORT}}
+{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+P\+O\+RT~8883}
+
+
+
+port for communication 
+
+\mbox{\Hypertarget{aws_8h_a977bd2592e99309a86e7034189e9e62d}\label{aws_8h_a977bd2592e99309a86e7034189e9e62d}} 
+\index{aws.h@{aws.h}!MQTT\_SERVER@{MQTT\_SERVER}}
+\index{MQTT\_SERVER@{MQTT\_SERVER}!aws.h@{aws.h}}
+\doxysubsubsection{\texorpdfstring{MQTT\_SERVER}{MQTT\_SERVER}}
+{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+S\+E\+R\+V\+ER~\char`\"{}a21w079cqlmaf8-\/ats.\+iot.\+ap-\/south-\/1.amazonaws.\+com\char`\"{}}
+
+
+
+A\+WS end point of A\+WS thing. 
+
+\mbox{\Hypertarget{aws_8h_a400d28e1af2bcd57bf651dc23290a6d3}\label{aws_8h_a400d28e1af2bcd57bf651dc23290a6d3}} 
+\index{aws.h@{aws.h}!MQTT\_TOPIC@{MQTT\_TOPIC}}
+\index{MQTT\_TOPIC@{MQTT\_TOPIC}!aws.h@{aws.h}}
+\doxysubsubsection{\texorpdfstring{MQTT\_TOPIC}{MQTT\_TOPIC}}
+{\footnotesize\ttfamily \#define M\+Q\+T\+T\+\_\+\+T\+O\+P\+IC~\char`\"{}akshay\+\_\+trial2\+\_\+test\char`\"{}}
+
+
+
+topic to send message 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{aws_8h_a47c9ff3cc6b99f3637d8a667249192cb}\label{aws_8h_a47c9ff3cc6b99f3637d8a667249192cb}} 
+\index{aws.h@{aws.h}!aws\_check\_if\_connected@{aws\_check\_if\_connected}}
+\index{aws\_check\_if\_connected@{aws\_check\_if\_connected}!aws.h@{aws.h}}
+\doxysubsubsection{\texorpdfstring{aws\_check\_if\_connected()}{aws\_check\_if\_connected()}}
+{\footnotesize\ttfamily void aws\+\_\+check\+\_\+if\+\_\+connected (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function to ensure if A\+WS client is connected. If not connected reconnect it. 
+
+\DoxyHorRuler{0}
+ \begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{203                                  \{}
+\DoxyCodeLine{204     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.connected()) \{}
+\DoxyCodeLine{205         \mbox{\hyperlink{aws_8cpp_a9a273d1fef86e42b8aef00447153f31f}{aws\_reconnect}}();}
+\DoxyCodeLine{206     \}}
+\DoxyCodeLine{207     \mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.loop();}
+\DoxyCodeLine{208 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8h_af93d078d69a1aec27b696444fdf146e1}\label{aws_8h_af93d078d69a1aec27b696444fdf146e1}} 
+\index{aws.h@{aws.h}!aws\_init@{aws\_init}}
+\index{aws\_init@{aws\_init}!aws.h@{aws.h}}
+\doxysubsubsection{\texorpdfstring{aws\_init()}{aws\_init()}}
+{\footnotesize\ttfamily void aws\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function will initialize all the necessary components for A\+WS. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{214 \{}
+\DoxyCodeLine{215     \mbox{\hyperlink{aws_8cpp_a093d9e86c45f3e96d9062727b04b589f}{aws\_read\_certificates}}();}
+\DoxyCodeLine{216     \mbox{\hyperlink{aws_8cpp_a4f58dc8412e8947a07c9dcce9bc4ce67}{aws\_configure\_client}}();}
+\DoxyCodeLine{217     \mbox{\hyperlink{aws_8cpp_a9a273d1fef86e42b8aef00447153f31f}{aws\_reconnect}}();}
+\DoxyCodeLine{218 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{aws_8h_acda02faadbba59fcacff34f62dd36282}\label{aws_8h_acda02faadbba59fcacff34f62dd36282}} 
+\index{aws.h@{aws.h}!aws\_publish@{aws\_publish}}
+\index{aws\_publish@{aws\_publish}!aws.h@{aws.h}}
+\doxysubsubsection{\texorpdfstring{aws\_publish()}{aws\_publish()}}
+{\footnotesize\ttfamily void aws\+\_\+publish (\begin{DoxyParamCaption}\item[{char $\ast$}]{payload }\end{DoxyParamCaption})}
+
+
+
+Function to publish on A\+WS cloud configured. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em payload} & \+: pointer to message to be sent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{194                                \{}
+\DoxyCodeLine{195     \mbox{\hyperlink{aws_8cpp_aee63e84c606cfaefce454689113c636c}{client}}.publish(\mbox{\hyperlink{aws_8h_a400d28e1af2bcd57bf651dc23290a6d3}{MQTT\_TOPIC}},\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{196 \}}
+
+\end{DoxyCode}

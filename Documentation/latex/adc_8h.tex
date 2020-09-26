@@ -1,0 +1,86 @@
+\hypertarget{adc_8h}{}\doxysection{C\+:/\+Users/aksha/\+Documents/\+Akshay/\+Projects/\+Smart\+\_\+solutions/\+Akshay\+\_\+data/\+E\+S\+P32/\+New\+Code\+\_\+\+\_\+\+Pub\+\_\+sub/pub\+\_\+sub/adc.h File Reference}
+\label{adc_8h}\index{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/adc.h@{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/adc.h}}
+
+
+header file for the declarations necessary for A\+DC module  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{adc_8h_a3d767e16f12a6ee542079f3c9677192c}{A\+D\+C\+\_\+1}}~34
+\begin{DoxyCompactList}\small\item\em A\+DC pin 1. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{adc_8h_a01ac9d2f00660408bcc8c809020904f9}{A\+D\+C\+\_\+2}}~35
+\begin{DoxyCompactList}\small\item\em A\+DC pin 2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{adc_8h_ac82c69d072e770fc40e81fc9c53857c1}{adc\+\_\+read\+\_\+and\+\_\+msg}} (char $\ast$data\+\_\+payload)
+\begin{DoxyCompactList}\small\item\em This interface will read A\+DC values and fill the buffer with message consisting these A\+DC values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+header file for the declarations necessary for A\+DC module 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Akshay Godase 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/09-\/202
+\end{DoxyDate}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{adc_8h_a3d767e16f12a6ee542079f3c9677192c}\label{adc_8h_a3d767e16f12a6ee542079f3c9677192c}} 
+\index{adc.h@{adc.h}!ADC\_1@{ADC\_1}}
+\index{ADC\_1@{ADC\_1}!adc.h@{adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_1}{ADC\_1}}
+{\footnotesize\ttfamily \#define A\+D\+C\+\_\+1~34}
+
+
+
+A\+DC pin 1. 
+
+\mbox{\Hypertarget{adc_8h_a01ac9d2f00660408bcc8c809020904f9}\label{adc_8h_a01ac9d2f00660408bcc8c809020904f9}} 
+\index{adc.h@{adc.h}!ADC\_2@{ADC\_2}}
+\index{ADC\_2@{ADC\_2}!adc.h@{adc.h}}
+\doxysubsubsection{\texorpdfstring{ADC\_2}{ADC\_2}}
+{\footnotesize\ttfamily \#define A\+D\+C\+\_\+2~35}
+
+
+
+A\+DC pin 2. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{adc_8h_ac82c69d072e770fc40e81fc9c53857c1}\label{adc_8h_ac82c69d072e770fc40e81fc9c53857c1}} 
+\index{adc.h@{adc.h}!adc\_read\_and\_msg@{adc\_read\_and\_msg}}
+\index{adc\_read\_and\_msg@{adc\_read\_and\_msg}!adc.h@{adc.h}}
+\doxysubsubsection{\texorpdfstring{adc\_read\_and\_msg()}{adc\_read\_and\_msg()}}
+{\footnotesize\ttfamily void adc\+\_\+read\+\_\+and\+\_\+msg (\begin{DoxyParamCaption}\item[{char $\ast$}]{data\+\_\+payload }\end{DoxyParamCaption})}
+
+
+
+This interface will read A\+DC values and fill the buffer with message consisting these A\+DC values. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+payload} & \+: data buffer to be filled with A\+DC value string \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18   uint16\_t value\_adc\_1 = 0,value\_adc\_2=0;}
+\DoxyCodeLine{19   value\_adc\_1 = analogRead(\mbox{\hyperlink{adc_8h_a3d767e16f12a6ee542079f3c9677192c}{ADC\_1}});}
+\DoxyCodeLine{20   value\_adc\_2 = analogRead(\mbox{\hyperlink{adc_8h_a01ac9d2f00660408bcc8c809020904f9}{ADC\_2}});}
+\DoxyCodeLine{21   sprintf( data\_payload, \textcolor{stringliteral}{"{}adc\_1 = \%u adc\_2 = \%u"{}},value\_adc\_1,value\_adc\_2);}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}

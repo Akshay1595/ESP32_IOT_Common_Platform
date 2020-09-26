@@ -1,0 +1,433 @@
+\hypertarget{cmd_8cpp}{}\doxysection{C\+:/\+Users/aksha/\+Documents/\+Akshay/\+Projects/\+Smart\+\_\+solutions/\+Akshay\+\_\+data/\+E\+S\+P32/\+New\+Code\+\_\+\+\_\+\+Pub\+\_\+sub/pub\+\_\+sub/cmd.cpp File Reference}
+\label{cmd_8cpp}\index{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/cmd.cpp@{C:/Users/aksha/Documents/Akshay/Projects/Smart\_solutions/Akshay\_data/ESP32/NewCode\_\_Pub\_sub/pub\_sub/cmd.cpp}}
+
+
+This module takes care of bluetooth initialization. Bluetooth in this project is used to accept the S\+S\+ID and password for wifi connection.  
+
+
+{\ttfamily \#include \char`\"{}Bluetooth\+Serial.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmd.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{cmd_8cpp_a6db4a8884eff7659db25c2ab850077a1}{cmd\+\_\+\+A\+T\+\_\+\+I\+S\+\_\+\+C\+N\+CT}} (void)
+\begin{DoxyCompactList}\small\item\em This interface is called in response to I\+S\+\_\+\+C\+N\+CT command which informs if W\+I\+FI is connected or not. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_a51a2d3e6453bb57c56ef7d58db005c11}{cmd\+\_\+ble\+\_\+callback}} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Callback to handle message received by bluetooth. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cmd_8cpp_a26ee2469586d27bea5fd2d962f6a626b}{cmd\+\_\+ble\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em This interface is for initialization of bluetooth. This interface waits for input from bluetooth device. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_a07a14497cfc510fa83eae3bdd7792d7f}{cmd\+\_\+disable\+\_\+bluetooth}} (void)
+\begin{DoxyCompactList}\small\item\em This interface disables bluetooth. Since bluetooth has accepted the S\+S\+ID and Password. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_a83a22be6ac72ee6f716a699cecf62574}{cmd\+\_\+get\+\_\+ssid\+\_\+pswd}} (void)
+\begin{DoxyCompactList}\small\item\em This interface gets S\+S\+ID and password with bluetooth. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_a83455b04fb20995e10032c2acb74f1a4}{cmd\+\_\+handler}} (char $\ast$buff)
+\begin{DoxyCompactList}\small\item\em Handler to handle command received. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}{cmd\+\_\+log}} (char $\ast$\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}})
+\begin{DoxyCompactList}\small\item\em Logging interface to print the buffer data on serial monitor and returns on bluetooth terminal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_a5f95da827b54219f8aab90b3e6f57ca4}{cmd\+\_\+on\+\_\+\+AT}} (void)
+\begin{DoxyCompactList}\small\item\em This interface generate response to AT command. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_acccab964e7487deb3b72e4b407b13e25}{cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+E\+RR}} (void)
+\begin{DoxyCompactList}\small\item\em This interface is returns error response for invalid command. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_a41bb7c12e6bfd04ef1d026cd52cfec01}{cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+P\+S\+WD}} (char $\ast$buff)
+\begin{DoxyCompactList}\small\item\em This interface is called in response to password command. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_acba2ea5378ef6cccd229c513d5d48536}{cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+S\+S\+ID}} (char $\ast$buff)
+\begin{DoxyCompactList}\small\item\em This interface is called in response to S\+S\+ID command. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_ab2d40a00b42cce33a050e0629f7c9b02}{cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+T\+O\+FF}} (void)
+\begin{DoxyCompactList}\small\item\em This interface is called in response to T\+O\+FF command which turns off L\+ED. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{cmd_8cpp_a1b7d4ff8278f0156c3471f6d1277c897}{cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+T\+ON}} (void)
+\begin{DoxyCompactList}\small\item\em This interface is called in response to T\+ON command which turns on L\+ED. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{cmd_8cpp_a878fdc261365563d4d632b45ca8c8c65}{commands\+\_\+input}} \mbox{[}$\,$\mbox{]}\mbox{[}32\mbox{]}
+\item 
+Bluetooth\+Serial \mbox{\hyperlink{cmd_8cpp_a1ea47e148eab76ef3fc8dc36ba58a9b1}{Serial\+BT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module takes care of bluetooth initialization. Bluetooth in this project is used to accept the S\+S\+ID and password for wifi connection. 
+
+\DoxyHorRuler{0}
+
+
+\begin{DoxyAuthor}{Author}
+Akshay Godase 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22-\/09-\/202 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cmd_8cpp_a6db4a8884eff7659db25c2ab850077a1}\label{cmd_8cpp_a6db4a8884eff7659db25c2ab850077a1}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_AT\_IS\_CNCT@{cmd\_AT\_IS\_CNCT}}
+\index{cmd\_AT\_IS\_CNCT@{cmd\_AT\_IS\_CNCT}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_AT\_IS\_CNCT()}{cmd\_AT\_IS\_CNCT()}}
+{\footnotesize\ttfamily static void cmd\+\_\+\+A\+T\+\_\+\+I\+S\+\_\+\+C\+N\+CT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This interface is called in response to I\+S\+\_\+\+C\+N\+CT command which informs if W\+I\+FI is connected or not. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95                                  \{}
+\DoxyCodeLine{96   \textcolor{keywordtype}{char} \mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}}[32] = \{\};}
+\DoxyCodeLine{97     \textcolor{keywordflow}{if}(\mbox{\hyperlink{wifi_8cpp_a026bf82fbb2168cd5ea7447afce0dd9b}{wifi\_check\_status}}()) \{}
+\DoxyCodeLine{98         strcpy(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}},\textcolor{stringliteral}{"{}WIFI connected!"{}});}
+\DoxyCodeLine{99         \mbox{\hyperlink{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}{cmd\_log}}(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{100     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{101         strcpy(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}},\textcolor{stringliteral}{"{}WIFI not connected!"{}});}
+\DoxyCodeLine{102         \mbox{\hyperlink{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}{cmd\_log}}(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_a51a2d3e6453bb57c56ef7d58db005c11}\label{cmd_8cpp_a51a2d3e6453bb57c56ef7d58db005c11}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_ble\_callback@{cmd\_ble\_callback}}
+\index{cmd\_ble\_callback@{cmd\_ble\_callback}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_ble\_callback()}{cmd\_ble\_callback()}}
+{\footnotesize\ttfamily static void cmd\+\_\+ble\+\_\+callback (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Callback to handle message received by bluetooth. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \+: data buffer of received message \\
+\hline
+{\em size} & \+: size of message received \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{187                                                                  \{}
+\DoxyCodeLine{188   \textcolor{keywordtype}{char} \textcolor{keywordtype}{string}[64] = \{\};}
+\DoxyCodeLine{189   strcpy(\textcolor{keywordtype}{string},(\textcolor{keywordtype}{char} *)buffer);}
+\DoxyCodeLine{190   \textcolor{keywordtype}{string}[size] =  0;}
+\DoxyCodeLine{191   \mbox{\hyperlink{cmd_8cpp_a83455b04fb20995e10032c2acb74f1a4}{cmd\_handler}}(\textcolor{keywordtype}{string});}
+\DoxyCodeLine{192 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_a26ee2469586d27bea5fd2d962f6a626b}\label{cmd_8cpp_a26ee2469586d27bea5fd2d962f6a626b}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_ble\_init@{cmd\_ble\_init}}
+\index{cmd\_ble\_init@{cmd\_ble\_init}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_ble\_init()}{cmd\_ble\_init()}}
+{\footnotesize\ttfamily void cmd\+\_\+ble\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This interface is for initialization of bluetooth. This interface waits for input from bluetooth device. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{198                         \{}
+\DoxyCodeLine{199   Serial.println(\textcolor{stringliteral}{"{}Initializing Bluetooth!\(\backslash\)n"{}});}
+\DoxyCodeLine{200   \mbox{\hyperlink{cmd_8cpp_a1ea47e148eab76ef3fc8dc36ba58a9b1}{SerialBT}}.begin(\mbox{\hyperlink{cmd_8h_acb1b00ff6b74be3791657f6c1a367330}{BLE\_NAME}}); \textcolor{comment}{//Bluetooth device name}}
+\DoxyCodeLine{201   \mbox{\hyperlink{cmd_8cpp_a1ea47e148eab76ef3fc8dc36ba58a9b1}{SerialBT}}.onData(\mbox{\hyperlink{cmd_8cpp_a51a2d3e6453bb57c56ef7d58db005c11}{cmd\_ble\_callback}});}
+\DoxyCodeLine{202   Serial.println(\textcolor{stringliteral}{"{}The device started, now you can pair it with bluetooth!"{}});}
+\DoxyCodeLine{203   \mbox{\hyperlink{cmd_8cpp_a83a22be6ac72ee6f716a699cecf62574}{cmd\_get\_ssid\_pswd}}();}
+\DoxyCodeLine{204 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_a07a14497cfc510fa83eae3bdd7792d7f}\label{cmd_8cpp_a07a14497cfc510fa83eae3bdd7792d7f}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_disable\_bluetooth@{cmd\_disable\_bluetooth}}
+\index{cmd\_disable\_bluetooth@{cmd\_disable\_bluetooth}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_disable\_bluetooth()}{cmd\_disable\_bluetooth()}}
+{\footnotesize\ttfamily static void cmd\+\_\+disable\+\_\+bluetooth (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+This interface disables bluetooth. Since bluetooth has accepted the S\+S\+ID and Password. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                                \{}
+\DoxyCodeLine{36     \mbox{\hyperlink{cmd_8cpp_a1ea47e148eab76ef3fc8dc36ba58a9b1}{SerialBT}}.end();}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_a83a22be6ac72ee6f716a699cecf62574}\label{cmd_8cpp_a83a22be6ac72ee6f716a699cecf62574}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_get\_ssid\_pswd@{cmd\_get\_ssid\_pswd}}
+\index{cmd\_get\_ssid\_pswd@{cmd\_get\_ssid\_pswd}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_get\_ssid\_pswd()}{cmd\_get\_ssid\_pswd()}}
+{\footnotesize\ttfamily static void cmd\+\_\+get\+\_\+ssid\+\_\+pswd (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This interface gets S\+S\+ID and password with bluetooth. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                     \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{while}((strlen(\mbox{\hyperlink{cmd_8h_a5268b07a2715992416b0af11a06f1bf7}{ssid}}) == 0) || (strlen(\mbox{\hyperlink{cmd_8h_a4b1981e80279b4f3d26bc18c1b4aea2b}{pswd}}) == 0))}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46         Serial.print(\textcolor{stringliteral}{"{}Waiting for SSID and password from bluetooth name :"{}});}
+\DoxyCodeLine{47         Serial.println(\mbox{\hyperlink{cmd_8h_acb1b00ff6b74be3791657f6c1a367330}{BLE\_NAME}});}
+\DoxyCodeLine{48         delay(5000);}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50     Serial.println(\textcolor{stringliteral}{"{}Got SSID and password as"{}});}
+\DoxyCodeLine{51     Serial.println(\mbox{\hyperlink{cmd_8h_a5268b07a2715992416b0af11a06f1bf7}{ssid}});}
+\DoxyCodeLine{52     Serial.println(\mbox{\hyperlink{cmd_8h_a4b1981e80279b4f3d26bc18c1b4aea2b}{pswd}});}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     Serial.println(\textcolor{stringliteral}{"{}Disconnecting Bluetooth!"{}});}
+\DoxyCodeLine{55     \mbox{\hyperlink{cmd_8cpp_a07a14497cfc510fa83eae3bdd7792d7f}{cmd\_disable\_bluetooth}}();}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_a83455b04fb20995e10032c2acb74f1a4}\label{cmd_8cpp_a83455b04fb20995e10032c2acb74f1a4}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_handler@{cmd\_handler}}
+\index{cmd\_handler@{cmd\_handler}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_handler()}{cmd\_handler()}}
+{\footnotesize\ttfamily static void cmd\+\_\+handler (\begin{DoxyParamCaption}\item[{char $\ast$}]{buff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handler to handle command received. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em buff} & \+: data buffer of received message \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{137 \{}
+\DoxyCodeLine{138     \textcolor{keywordtype}{int} cmd;}
+\DoxyCodeLine{139     \textcolor{keywordtype}{char} *ptr = NULL;}
+\DoxyCodeLine{140     \textcolor{keywordflow}{for} (cmd=0;cmd<\mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79aefe81fdea3b89c32c2b438cb38729a43}{CMD\_ERR}};cmd++) \{}
+\DoxyCodeLine{141         ptr = strstr(buff,\mbox{\hyperlink{cmd_8cpp_a878fdc261365563d4d632b45ca8c8c65}{commands\_input}}[cmd]);}
+\DoxyCodeLine{142         \textcolor{keywordflow}{if}(ptr) \{}
+\DoxyCodeLine{143                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{144         \}}
+\DoxyCodeLine{145     \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147     \textcolor{keywordflow}{switch}(cmd) \{}
+\DoxyCodeLine{148     \textcolor{keywordflow}{case} \mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79a08d080ed693ae3d57daeeadba389b28e}{CMD\_AT}}:}
+\DoxyCodeLine{149         \mbox{\hyperlink{cmd_8cpp_a5f95da827b54219f8aab90b3e6f57ca4}{cmd\_on\_AT}}();}
+\DoxyCodeLine{150         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152     \textcolor{keywordflow}{case} \mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79a58072f6775470f46adacf6d9d9848dfa}{CMD\_PSWD}}:}
+\DoxyCodeLine{153         \mbox{\hyperlink{cmd_8cpp_a41bb7c12e6bfd04ef1d026cd52cfec01}{cmd\_on\_AT\_PSWD}}(buff);}
+\DoxyCodeLine{154         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156     \textcolor{keywordflow}{case} \mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79a7f74d818b09d5c93b81dce5306977512}{CMD\_SSID}}:}
+\DoxyCodeLine{157         \mbox{\hyperlink{cmd_8cpp_acba2ea5378ef6cccd229c513d5d48536}{cmd\_on\_AT\_SSID}}(buff);}
+\DoxyCodeLine{158         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160     \textcolor{keywordflow}{case} \mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79a4afddbc639f5aa3d1a2956d9f9b9e9e8}{CMD\_CNCT}}:}
+\DoxyCodeLine{161         \mbox{\hyperlink{wifi_8cpp_a7267cf9f0ba503d904709977c18a07ea}{wifi\_init}}();}
+\DoxyCodeLine{162         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164     \textcolor{keywordflow}{case} \mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79a8523e0e3d5e4215783b42a081cf408ab}{CMD\_IS\_CNCT}}:}
+\DoxyCodeLine{165         \mbox{\hyperlink{cmd_8cpp_a6db4a8884eff7659db25c2ab850077a1}{cmd\_AT\_IS\_CNCT}}();}
+\DoxyCodeLine{166         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168     \textcolor{keywordflow}{case} \mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79af3181ba5374d6a9ef7529fd60da50fb9}{CMD\_TON}}:}
+\DoxyCodeLine{169         \mbox{\hyperlink{cmd_8cpp_a1b7d4ff8278f0156c3471f6d1277c897}{cmd\_on\_AT\_TON}}();}
+\DoxyCodeLine{170         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172     \textcolor{keywordflow}{case} \mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79ae79cfbc671c8f32d48be5d01229cc3dd}{CMD\_TOFF}}:}
+\DoxyCodeLine{173         \mbox{\hyperlink{cmd_8cpp_ab2d40a00b42cce33a050e0629f7c9b02}{cmd\_on\_AT\_TOFF}}();}
+\DoxyCodeLine{174         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{177         \mbox{\hyperlink{cmd_8cpp_acccab964e7487deb3b72e4b407b13e25}{cmd\_on\_AT\_ERR}}();}
+\DoxyCodeLine{178         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{179     \}}
+\DoxyCodeLine{180 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}\label{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_log@{cmd\_log}}
+\index{cmd\_log@{cmd\_log}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_log()}{cmd\_log()}}
+{\footnotesize\ttfamily void cmd\+\_\+log (\begin{DoxyParamCaption}\item[{char $\ast$}]{payload }\end{DoxyParamCaption})}
+
+
+
+Logging interface to print the buffer data on serial monitor and returns on bluetooth terminal. 
+
+\DoxyHorRuler{0}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em payload} & \+: buffer to print the data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{213                            \{}
+\DoxyCodeLine{214   Serial.println(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{215   \mbox{\hyperlink{cmd_8cpp_a1ea47e148eab76ef3fc8dc36ba58a9b1}{SerialBT}}.write((\textcolor{keyword}{const} uint8\_t*)\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}},strlen(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}}));}
+\DoxyCodeLine{216 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_a5f95da827b54219f8aab90b3e6f57ca4}\label{cmd_8cpp_a5f95da827b54219f8aab90b3e6f57ca4}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_on\_AT@{cmd\_on\_AT}}
+\index{cmd\_on\_AT@{cmd\_on\_AT}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_on\_AT()}{cmd\_on\_AT()}}
+{\footnotesize\ttfamily static void cmd\+\_\+on\+\_\+\+AT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+This interface generate response to AT command. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{61                                    \{}
+\DoxyCodeLine{62   \mbox{\hyperlink{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}{cmd\_log}}(\textcolor{stringliteral}{"{}OK!"{}});}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_acccab964e7487deb3b72e4b407b13e25}\label{cmd_8cpp_acccab964e7487deb3b72e4b407b13e25}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_on\_AT\_ERR@{cmd\_on\_AT\_ERR}}
+\index{cmd\_on\_AT\_ERR@{cmd\_on\_AT\_ERR}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_on\_AT\_ERR()}{cmd\_on\_AT\_ERR()}}
+{\footnotesize\ttfamily static void cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+E\+RR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+This interface is returns error response for invalid command. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{127                                        \{}
+\DoxyCodeLine{128     \mbox{\hyperlink{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}{cmd\_log}}(\textcolor{stringliteral}{"{}Error!\(\backslash\)n"{}});}
+\DoxyCodeLine{129 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_a41bb7c12e6bfd04ef1d026cd52cfec01}\label{cmd_8cpp_a41bb7c12e6bfd04ef1d026cd52cfec01}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_on\_AT\_PSWD@{cmd\_on\_AT\_PSWD}}
+\index{cmd\_on\_AT\_PSWD@{cmd\_on\_AT\_PSWD}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_on\_AT\_PSWD()}{cmd\_on\_AT\_PSWD()}}
+{\footnotesize\ttfamily static void cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+P\+S\+WD (\begin{DoxyParamCaption}\item[{char $\ast$}]{buff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This interface is called in response to password command. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & of command \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                        \{}
+\DoxyCodeLine{70     \textcolor{keywordtype}{char} \mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}}[32] = \{\};  }
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     strcpy(\mbox{\hyperlink{cmd_8h_a4b1981e80279b4f3d26bc18c1b4aea2b}{pswd}},buff+strlen(\mbox{\hyperlink{cmd_8cpp_a878fdc261365563d4d632b45ca8c8c65}{commands\_input}}[\mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79a58072f6775470f46adacf6d9d9848dfa}{CMD\_PSWD}}]));}
+\DoxyCodeLine{73     sprintf(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}},\textcolor{stringliteral}{"{}Password set to = \%s"{}},\mbox{\hyperlink{cmd_8h_a4b1981e80279b4f3d26bc18c1b4aea2b}{pswd}});}
+\DoxyCodeLine{74     }
+\DoxyCodeLine{75     \mbox{\hyperlink{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}{cmd\_log}}(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{76 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_acba2ea5378ef6cccd229c513d5d48536}\label{cmd_8cpp_acba2ea5378ef6cccd229c513d5d48536}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_on\_AT\_SSID@{cmd\_on\_AT\_SSID}}
+\index{cmd\_on\_AT\_SSID@{cmd\_on\_AT\_SSID}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_on\_AT\_SSID()}{cmd\_on\_AT\_SSID()}}
+{\footnotesize\ttfamily static void cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+S\+S\+ID (\begin{DoxyParamCaption}\item[{char $\ast$}]{buff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This interface is called in response to S\+S\+ID command. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyParams}{Parameters}
+{\em buff} & \+: data buffer of received message \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82                                        \{}
+\DoxyCodeLine{83     \textcolor{keywordtype}{char} \mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}}[32] = \{\};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85     strcpy(\mbox{\hyperlink{cmd_8h_a5268b07a2715992416b0af11a06f1bf7}{ssid}},buff+strlen(\mbox{\hyperlink{cmd_8cpp_a878fdc261365563d4d632b45ca8c8c65}{commands\_input}}[\mbox{\hyperlink{cmd_8h_a4ada56bfa066dae5d7b3382f15868d79a7f74d818b09d5c93b81dce5306977512}{CMD\_SSID}}]));}
+\DoxyCodeLine{86     sprintf(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}},\textcolor{stringliteral}{"{}SSID set to \%s\(\backslash\)n"{}},\mbox{\hyperlink{cmd_8h_a5268b07a2715992416b0af11a06f1bf7}{ssid}});}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88   \mbox{\hyperlink{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}{cmd\_log}}(\mbox{\hyperlink{pub__sub_8ino_a0994d3d44eaf32f76d3a731f458b8da2}{payload}});}
+\DoxyCodeLine{89 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_ab2d40a00b42cce33a050e0629f7c9b02}\label{cmd_8cpp_ab2d40a00b42cce33a050e0629f7c9b02}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_on\_AT\_TOFF@{cmd\_on\_AT\_TOFF}}
+\index{cmd\_on\_AT\_TOFF@{cmd\_on\_AT\_TOFF}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_on\_AT\_TOFF()}{cmd\_on\_AT\_TOFF()}}
+{\footnotesize\ttfamily static void cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+T\+O\+FF (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This interface is called in response to T\+O\+FF command which turns off L\+ED. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119                                  \{}
+\DoxyCodeLine{120     \mbox{\hyperlink{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}{cmd\_log}}(\textcolor{stringliteral}{"{}Turning OFF LED\(\backslash\)n"{}});}
+\DoxyCodeLine{121     \mbox{\hyperlink{led_8h_aa82ab869f6518488d5738ea3a6dfc55e}{led\_reset\_MSG\_rcvd\_pin}}();}
+\DoxyCodeLine{122 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{cmd_8cpp_a1b7d4ff8278f0156c3471f6d1277c897}\label{cmd_8cpp_a1b7d4ff8278f0156c3471f6d1277c897}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_on\_AT\_TON@{cmd\_on\_AT\_TON}}
+\index{cmd\_on\_AT\_TON@{cmd\_on\_AT\_TON}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_on\_AT\_TON()}{cmd\_on\_AT\_TON()}}
+{\footnotesize\ttfamily static void cmd\+\_\+on\+\_\+\+A\+T\+\_\+\+T\+ON (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This interface is called in response to T\+ON command which turns on L\+ED. 
+
+\DoxyHorRuler{0}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110                                 \{}
+\DoxyCodeLine{111     \mbox{\hyperlink{cmd_8cpp_a078a79f13cf4816043abf054999bfe36}{cmd\_log}}(\textcolor{stringliteral}{"{}Turning ON LED\(\backslash\)n"{}});}
+\DoxyCodeLine{112     \mbox{\hyperlink{led_8h_afcd48013315086508b85b5434044f5d7}{led\_set\_MSG\_rcvd\_pin}}();}
+\DoxyCodeLine{113 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{cmd_8cpp_a878fdc261365563d4d632b45ca8c8c65}\label{cmd_8cpp_a878fdc261365563d4d632b45ca8c8c65}} 
+\index{cmd.cpp@{cmd.cpp}!commands\_input@{commands\_input}}
+\index{commands\_input@{commands\_input}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{commands\_input}{commands\_input}}
+{\footnotesize\ttfamily char commands\+\_\+input\mbox{[}$\,$\mbox{]}\mbox{[}32\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT?"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+PSWD="{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+SSID="{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+CNCT"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+IS\_CNCT?"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+TON"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+TOFF"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+Commands that can be input with bluetooth \mbox{\Hypertarget{cmd_8cpp_a1ea47e148eab76ef3fc8dc36ba58a9b1}\label{cmd_8cpp_a1ea47e148eab76ef3fc8dc36ba58a9b1}} 
+\index{cmd.cpp@{cmd.cpp}!SerialBT@{SerialBT}}
+\index{SerialBT@{SerialBT}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{SerialBT}{SerialBT}}
+{\footnotesize\ttfamily Bluetooth\+Serial Serial\+BT}
+
+Bluetooth module object 

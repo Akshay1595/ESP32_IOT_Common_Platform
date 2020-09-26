@@ -1,0 +1,59 @@
+\hypertarget{a00014}{}\doxysection{cmd.\+cpp File Reference}
+\label{a00014}\index{cmd.cpp@{cmd.cpp}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00014_ac26f9113a1e0e73818edf2c8c0f58adf_ac26f9113a1e0e73818edf2c8c0f58adf}{cmd\+\_\+ble\+\_\+init}} ()
+\item 
+void \mbox{\hyperlink{a00014_a078a79f13cf4816043abf054999bfe36_a078a79f13cf4816043abf054999bfe36}{cmd\+\_\+log}} (char $\ast$payload)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Bluetooth\+Serial \mbox{\hyperlink{a00014_a1ea47e148eab76ef3fc8dc36ba58a9b1_a1ea47e148eab76ef3fc8dc36ba58a9b1}{Serial\+BT}}
+\item 
+char \mbox{\hyperlink{a00014_a878fdc261365563d4d632b45ca8c8c65_a878fdc261365563d4d632b45ca8c8c65}{commands\+\_\+input}} \mbox{[}$\,$\mbox{]}\mbox{[}32\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{a00014_ac26f9113a1e0e73818edf2c8c0f58adf_ac26f9113a1e0e73818edf2c8c0f58adf}\label{a00014_ac26f9113a1e0e73818edf2c8c0f58adf_ac26f9113a1e0e73818edf2c8c0f58adf}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_ble\_init@{cmd\_ble\_init}}
+\index{cmd\_ble\_init@{cmd\_ble\_init}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_ble\_init()}{cmd\_ble\_init()}}
+{\footnotesize\ttfamily void cmd\+\_\+ble\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{a00014_a078a79f13cf4816043abf054999bfe36_a078a79f13cf4816043abf054999bfe36}\label{a00014_a078a79f13cf4816043abf054999bfe36_a078a79f13cf4816043abf054999bfe36}} 
+\index{cmd.cpp@{cmd.cpp}!cmd\_log@{cmd\_log}}
+\index{cmd\_log@{cmd\_log}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{cmd\_log()}{cmd\_log()}}
+{\footnotesize\ttfamily void cmd\+\_\+log (\begin{DoxyParamCaption}\item[{char $\ast$}]{payload }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{a00014_a878fdc261365563d4d632b45ca8c8c65_a878fdc261365563d4d632b45ca8c8c65}\label{a00014_a878fdc261365563d4d632b45ca8c8c65_a878fdc261365563d4d632b45ca8c8c65}} 
+\index{cmd.cpp@{cmd.cpp}!commands\_input@{commands\_input}}
+\index{commands\_input@{commands\_input}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{commands\_input}{commands\_input}}
+{\footnotesize\ttfamily char commands\+\_\+input\mbox{[}$\,$\mbox{]}\mbox{[}32\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT?"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+PSWD="{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+SSID="{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+CNCT"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+IS\_CNCT?"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+TON"{}},}
+\DoxyCodeLine{    \textcolor{stringliteral}{"{}AT+TOFF"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{a00014_a1ea47e148eab76ef3fc8dc36ba58a9b1_a1ea47e148eab76ef3fc8dc36ba58a9b1}\label{a00014_a1ea47e148eab76ef3fc8dc36ba58a9b1_a1ea47e148eab76ef3fc8dc36ba58a9b1}} 
+\index{cmd.cpp@{cmd.cpp}!SerialBT@{SerialBT}}
+\index{SerialBT@{SerialBT}!cmd.cpp@{cmd.cpp}}
+\doxysubsubsection{\texorpdfstring{SerialBT}{SerialBT}}
+{\footnotesize\ttfamily Bluetooth\+Serial Serial\+BT}
+
